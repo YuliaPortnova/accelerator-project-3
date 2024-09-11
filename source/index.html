@@ -19,13 +19,91 @@
 
   <body class="page">
     <main class="page__main">
-      <div data-test="page__header-hero">
-        <div class="page__header-hero-container page__container">
-          <header class="header"></header>
-          <section class="hero"></section>
-        </div>
-      </div>
-      <div data-test="about">about</div>
+      <h1 class="visually-hidden">Проект «Стажировка».</h1>
+      <section data-test="page__hero hero swiper">
+        <header class="header page__container">
+          <img src="/__spritemap#sprite-logo-view" alt="Логотип проекта «Стажировка».">
+          <nav class="header__menu">
+            <button header__menu-button>Меню</button>
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__link" href="#about">О проекте</a>
+              </li>
+              <li class="header__menu-item">
+                <button type="button">Программы</button>
+                <ul class="header__menu-inner-list">
+                  <li class="header__menu-item">
+                    <a class="header__link" href="#">Стажировки</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__link" href="#">Волонтёрство</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__link" href="#">Учёба</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__link" href="#">Религия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Как поехать</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Отзывы</a>
+              </li>
+              <li class="header__menu-item">
+                <button type="button">Новости</button>
+                <ul class="header__menu-inner-list">
+                  <li class="header__menu-item">
+                    <a class="header__link" href="#">Волонтёрство</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__link" href="#">Стажировки</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__link" href="#">Карьера</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__link" href="#">Путешествия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <h2 class="visually-hidden">Что даст вам участие в этом проекте?</h2>
+        <ul class="hero__list swiper-wrapper">
+          <li class="hero__slide swiper-slide">
+            <div class="hero__slide-content">
+              <div class="swiper-pagination"></div>
+              <h3 class="hero__slide-title">Глобальный профессиональный опыт обучения за рубежом</h3>
+              <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
+              <a class="hero__button button" href="#">Подробнее</a>
+            </div>
+          </li>
+          <li class="hero__slide swiper-slide">
+            <div class="hero__slide-content">
+              <div class="swiper-pagination"></div>
+              <h3 class="hero__slide-title">Волонтёрские программы – внесите свой вклад в общество</h3>
+              <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+              <a class="hero__button button" href="#">Подробнее</a>
+            </div>
+          </li>
+          <li class="hero__slide swiper-slide">
+            <div class="hero__slide-content">
+              <div class="swiper-pagination"></div>
+              <h3 class="hero__slide-title">Программы стажировок в крупнейших компаниях мира</h3>
+              <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+              <a class="hero__button button" href="#">Подробнее</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <div data-test="about" id="about">about</div>
       <div data-test="programs">programs</div>
       <div data-test="grant">grant</div>
       <div data-test="news">news</div>
