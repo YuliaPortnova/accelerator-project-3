@@ -1,4 +1,13 @@
 // Vendor
-// ---------------------------------
-
 @import "vendor/normalize";
+
+// Переменные
+@import "global/variables";
+
+// Базовые стили
+@import "global/fonts";
+@import "global/global";
+@import "global/utils";
+
+// Блоки компонентов
+@import "blocks/page";

@@ -6,25 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internship</title>
     <link rel="stylesheet" href="sass/style.scss">
+    <link rel="preload" href="fonts/manrope-300.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/manrope-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/manrope-500.woff2" as="font" crossorigin="anonymous">
+    <meta name="description" content="Третий проект акселератора в HTML Academy">
+    <!-- <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="img/favicons/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicons/favicon.svg">
+    <link rel="apple-touch-icon" href="img/favicons/icon-180.png">
+    <link rel="manifest" href="manifest.webmanifest"> -->
   </head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+  <body class="page">
+    <main class="page__main">
+      <div data-test="page__header-hero">
+        <div class="page__header-hero-container page__container">
+          <header class="header"></header>
+          <section class="hero"></section>
+        </div>
+      </div>
+      <div data-test="about">about</div>
+      <div data-test="programs">programs</div>
+      <div data-test="grant">grant</div>
+      <div data-test="news">news</div>
+      <div data-test="FAQ">FAQ</div>
+      <div data-test="reviews">reviews</div>
+      <div data-test="contacts">contacts</div>
+      <div data-test="form">form</div>
+    </main>
+    <footer class="page__footer footer" data-test="footer">
+        <!-- пример использования спрайта -->
+    <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
       <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
-    <div data-test="grant">grant</div>
-    <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+    </svg> -->
+    </footer>
     <script type="module" src="js/main.js"></script>
   </body>
 
