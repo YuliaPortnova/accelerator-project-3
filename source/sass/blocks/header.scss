@@ -1,0 +1,32 @@
+.header {
+  position: relative;
+}
+
+.header__container {
+  position: absolute;
+  top: 20px;
+  z-index: 2;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header__menu-list {
+  background-color: var(--primary, #316dc2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+
+  .header__menu:focus-within & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
