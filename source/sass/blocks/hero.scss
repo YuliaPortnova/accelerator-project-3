@@ -102,6 +102,9 @@
 }
 
 .hero__pagination {
+  position: relative;
+  min-height: 28px;
+  min-width: 80px;
   display: flex;
   flex-wrap: wrap;
   padding: 10px 16px;
@@ -123,6 +126,7 @@
     background-image: url("../__spritemap#sprite-angle-view");
     background-repeat: no-repeat;
     background-position: center;
+    transform: rotate(-90deg);
   }
 }
 

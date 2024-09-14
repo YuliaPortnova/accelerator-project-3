@@ -7,17 +7,16 @@ const innerButtons = document.querySelectorAll('.hero__link');
 const heroSlider = new Swiper('.hero', {
   modules: [Pagination],
   pagination: {
-    el: '.hero__pagination',
+    el: '.swiper-slide-active .hero__pagination',
     clickable: true,
     bulletElement: 'button type="button" aria-label="Кнопка переключения слайдов."',
   },
-  dynamicBullets: true,
   watchOverflow: true,
   spaceBetween: 40,
   speed: 500,
   loop: true,
   lazy: true,
-  lazyPreloadPrevNext: 1,
+  lazyPreloadPrevNext: 3,
   preventClicks: true,
   autoHeight: true,
 
@@ -35,10 +34,10 @@ const heroSlider = new Swiper('.hero', {
   },
 
   on: {
-    realIndexChange: () => {
-      heroSlider.pagination.init();
-      heroSlider.pagination.render();
-      heroSlider.pagination.update();
+    slideChangeTransitionStart: (swiper) => {
+      swiper.pagination.init();
+      swiper.pagination.render();
+      swiper.pagination.update();
 
       innerButtons.forEach((button) => {
         button.setAttribute('tabindex', '-1');
