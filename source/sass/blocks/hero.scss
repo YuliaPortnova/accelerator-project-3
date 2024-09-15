@@ -193,10 +193,10 @@
 }
 
 .hero__slide-wrapper p:last-of-type {
-  border-radius: 0 0 14px 0;
+  border-radius: 0 0 14px;
 
   @media (min-width: $vp-768) {
-    border-radius: 0 0 0 0;
+    border-radius: 0;
   }
 }
 

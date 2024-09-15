@@ -7,7 +7,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  font-family: var(--font-family);
+  font-family: $font-family;
   color: var(--primary, #316dc2);
   text-transform: uppercase;
   text-decoration: none;
@@ -18,10 +18,28 @@
   border-radius: 30px;
   cursor: pointer;
 
+  transition: width 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    color: var(--white, #ffffff);
+    background-color: var(--primary, #316dc2);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:disabled,
+  &--disabled {
+    pointer-events: none;
+    color: var(--state-disabled, #a9afb7);
+    border-color: var(--state-disabled, #a9afb7);
+  }
+
   &::before {
     content: "";
     position: absolute;
-    top: 4px;
+    top: 3px;
     right: 4px;
 
     width: 46px;
@@ -29,9 +47,10 @@
 
     background-color: var(--primary, #316dc2);
     border-radius: 50%;
+    transform: background-color 0.3s ease;
   }
 
-  &::after {
+  &--arrow::after {
     content: "";
     position: absolute;
     top: 22px;
@@ -44,8 +63,158 @@
     transform: rotate(-45deg);
     transform-origin: center;
 
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 
     mask-image: url("../__spritemap#sprite-arrow-right-view");
   }
+
+  &--burger {
+    padding: 19px 70px 19px 19px;
+
+    background-color: var(--white, #ffffff);
+  }
+
+  &--burger::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 19px;
+
+    width: 15px;
+    height: 1px;
+
+    background-color: var(--white, #ffffff);
+    border-radius: 1px;
+    box-shadow: 0 3px 0 0 var(--white, #ffffff), 0 6px 0 0 var(--white, #ffffff);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+}
+
+.is-open .button--burger {
+  width: 100%;
+
+  color: var(--white, #ffffff);
+
+  background-color: var(--primary, #316dc2);
+
+  &::before {
+    background-color: var(--white, #ffffff);
+  }
+
+  &::after {
+    top: 17px;
+    right: 17px;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: var(--primary, #316dc2);
+    box-shadow: none;
+
+    mask-image: url("../__spritemap#sprite-cross-view");;
+  }
+}
+
+.button:hover::before {
+  background-color: var(--white, #ffffff);
+}
+
+.button:disabled::before,
+.button--disabled::before {
+  background-color: var(--state-disabled, #a9afb7);
+}
+
+.button--arrow:hover::after {
+  background-color: var(--primary, #316dc2);
+  transform: rotate(0deg);
+}
+
+.button--arrow:focus-visible::after {
+  transform: rotate(0deg);
+}
+
+.button--arrow:active::after {
+  opacity: 0.7;
+  transform: rotate(0deg);
+}
+
+.button--arrow:disabled::after,
+.button--arrow.button--disabled::after {
+  opacity: 0.6;
+  transform: rotate(-45deg);
+}
+
+.button--burger:hover::after {
+  background-color: var(--primary, #316dc2);
+  box-shadow: 0 3px 0 0 var(--primary, #316dc2), 0 6px 0 0 var(--primary, #316dc2);
+}
+
+.button--burger:focus-visible {
+  color: var(--primary, #316dc2);
+  background-color: var(--white, #ffffff);
+}
+
+.button--burger:focus-visible:hover {
+  color: var(--white, #ffffff);
+  background-color: var(--primary, #316dc2);
+}
+
+.button--burger:focus-visible::after {
+  opacity: 0.7;
+}
+
+.is-open .button--burger:disabled,
+.is-open .button--burger.button--disabled{
+  color: var(--state-disabled, #a9afb7);
+}
+
+.is-open .button--burger:disabled::after,
+.is-open .button--burger.button--disabled::after {
+  opacity: 0.6;
+  background-color: var(--white, #ffffff);
+}
+
+.button--burger:active::after {
+  opacity: 0.7;
+}
+
+.button--blue-background:hover {
+  border-color: var(--white, #ffffff);
+  color: var(--primary, #316dc2);
+  background-color: var(--white, #ffffff);
+}
+
+.button--blue-background:hover::before {
+  background-color: var(--primary, #316dc2);
+}
+
+.button--blue-background:hover::after {
+  background-color: var(--white, #ffffff);
+}
+
+.button--blue-background:active {
+  background-color: var(--white, #ffffff);
+  border-color: var(--white, #ffffff);
+  color: rgba(49, 109, 194, 0.7);
+}
+
+.button--blue-background:active::before {
+  background-color: var(--primary, #316dc2);
+}
+
+.button--blue-background:active::after {
+  background-color: var(--white, #ffffff);
+}
+
+.button--blue-background:focus-visible {
+  color: var(--white, #ffffff);
+  background-color: var(--primary, #316dc2);
+}
+
+.button--blue-background:focus-visible::before {
+  background-color: var(--white, #ffffff);
+}
+
+.button--blue-background:focus-visible::after {
+  background-color: var(--primary, #316dc2);
 }

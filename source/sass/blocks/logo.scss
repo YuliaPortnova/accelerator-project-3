@@ -1,0 +1,15 @@
+.logo {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white, #ffffff);
+  border-radius: 50%;
+}
+
+.logo__img {
+  object-fit: cover;
+  max-width: 30px;
+  max-height: 30px;
+}
