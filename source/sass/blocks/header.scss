@@ -70,8 +70,8 @@
   }
 
   .is-open & {
-    margin-left: auto;
     width: 100%;
+    margin-left: auto;
   }
 }
 
@@ -160,6 +160,7 @@
 
   .is-active + & {
     margin-top: 20px;
+
     opacity: 1;
   }
 }
@@ -168,6 +169,7 @@
   display: grid;
   padding: 0;
 
+  text-align: left;
   color: var(--white, #ffffff);
   text-transform: uppercase;
 
