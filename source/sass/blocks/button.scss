@@ -72,6 +72,11 @@
     padding: 19px 70px 19px 20px;
 
     background-color: var(--white, #ffffff);
+
+    @media (min-width: $vp-768) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
   }
 
   &--burger::after {

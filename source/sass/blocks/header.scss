@@ -13,6 +13,10 @@
   align-items: flex-start;
   width: 100%;
 
+  @media (min-width: $vp-768) {
+    top: 30px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -28,6 +32,10 @@
     opacity: 0;
 
     transition: opacity 0.3s ease;
+
+    @media (min-width: $vp-768) {
+      top: -30px;
+    }
   }
 }
 
