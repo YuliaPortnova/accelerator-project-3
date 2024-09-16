@@ -25,6 +25,12 @@
 
   @media (min-width: $vp-1440) {
     min-height: 800px;
+    padding-right: 372px;
+    padding-left: 100px;
+  }
+
+  @media (min-width: $vp-1440) {
+    min-height: 800px;
   }
 
   &--studying-abroad {
@@ -241,7 +247,7 @@
   }
 
   @media (min-width: $vp-1440) {
-    padding: 40px 138px 30px 50px;
+    padding: 40px 50px 30px;
 
     font-size: 54px;
     line-height: 62px;
@@ -264,6 +270,11 @@
 
     gap: 20px 74px;
     grid-template-columns: 1fr 198px;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   &::before {
@@ -338,6 +349,10 @@
   @media (min-width: $vp-768) {
     margin-right: 0;
     padding: 0;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-top: 11px;
   }
 
   &::before {
