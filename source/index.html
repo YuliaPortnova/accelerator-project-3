@@ -132,7 +132,7 @@
         <dl class="about__wrapper">
           <dt>Наша цель</dt>
           <dd>Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях карьеры, предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать значимые изменения.</dd>
-          <button class="about__button button button--arrow">Подробнее о проекте</button>
+          <a class="about__button button button--arrow" href="#">Подробнее о проекте</a>
         </dl>
         <ul class="about__list">
           <li class="about__item">
@@ -169,6 +169,36 @@
       <use href="/__spritemap#sprite-user"></use>
     </svg> -->
   </footer>
+  <div class="modal">
+    <button class="modal__close-button">
+      <span class="visually-hidden">Закрыть модальное окно.</span>
+    </button>
+    <section class="modal__content feedback">
+      <h2 class="feedback__title">Напишите нам</h2>
+      <p class="feedback__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+      <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+        <label class="form__item">
+          <span class="form__label">Имя</span>
+          <input class="form__input" type="text" name="name" required>
+        </label>
+        <label class="form__item">
+          <span class="form__label">Телефон</span>
+          <input class="form__input" type="tel" name="tel" required pattern="[^a-zA-Zа-яА-ЯЁё]+$">
+        </label>
+        <select class="form__item form__select" name="city">
+          <option value="not-selected"></option>
+          <option value="Moscow">Москва</option>
+          <option value="Saint-Petersburg">Санкт-Петербург</option>
+          <option value="Nizhny-Novgorod">Нижний Новгород</option>
+        </select>
+        <label class="form__checkbox-item">
+          <input class="form__checkbox" name="personal-data-consent" type="checkbox">
+          <span class="form__checkbox-label">Телефон</span>
+        </label>
+        <button class="feedback__button button button--arrow" type="submit">Отправить</button>
+      </form>
+    </section>
+  </div>
   <script type="module" src="js/main.js"></script>
 </body>
 
