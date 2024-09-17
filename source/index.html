@@ -87,7 +87,9 @@
       <ul class="hero__list swiper-wrapper">
         <li class="hero__slide swiper-slide">
           <div class="hero__slide-content hero__slide-content--studying-abroad">
-            <div class="swiper-pagination hero__pagination"></div>
+            <div class="hero__pagination-wrapper">
+              <div class="swiper-pagination hero__pagination"></div>
+            </div>
             <h3 class="hero__slide-title">Глобальный профессиональный опыт обучения за рубежом</h3>
             <div class="hero__slide-wrapper">
               <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
@@ -169,11 +171,11 @@
       <use href="/__spritemap#sprite-user"></use>
     </svg> -->
   </footer>
-  <div class="modal">
-    <button class="modal__close-button">
-      <span class="visually-hidden">Закрыть модальное окно.</span>
-    </button>
+  <div class="modal modal--feedback">
     <section class="modal__content feedback">
+      <button class="modal__close-button">
+        <span class="visually-hidden">Закрыть модальное окно.</span>
+      </button>
       <h2 class="feedback__title">Напишите нам</h2>
       <p class="feedback__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
       <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
@@ -193,7 +195,7 @@
         </select>
         <label class="form__checkbox-item">
           <input class="form__checkbox" name="personal-data-consent" type="checkbox">
-          <span class="form__checkbox-label">Телефон</span>
+          <span class="form__checkbox-label">Я согласен на обработку моих персональных данных</span>
         </label>
         <button class="feedback__button button button--arrow" type="submit">Отправить</button>
       </form>
