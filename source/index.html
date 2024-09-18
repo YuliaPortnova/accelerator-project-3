@@ -187,12 +187,15 @@
           <span class="form__label">Телефон</span>
           <input class="form__input" type="tel" name="tel" required pattern="[^a-zA-Zа-яА-ЯЁё]+$">
         </label>
-        <select class="form__item form__select" name="city">
-          <option value="not-selected"></option>
-          <option value="Moscow">Москва</option>
-          <option value="Saint-Petersburg">Санкт-Петербург</option>
-          <option value="Nizhny-Novgorod">Нижний Новгород</option>
-        </select>
+        <label class="form__item">
+          <span class="form__label">Выберите город</span>
+          <select class="form__input form__select" name="city">
+            <option value="not-selected"></option>
+            <option value="Moscow">Москва</option>
+            <option value="Saint-Petersburg">Санкт-Петербург</option>
+            <option value="Nizhny-Novgorod">Нижний Новгород</option>
+          </select>
+        </label>
         <label class="form__checkbox-item">
           <input class="form__checkbox" name="personal-data-consent" type="checkbox">
           <span class="form__checkbox-label">Я согласен на обработку моих персональных данных</span>

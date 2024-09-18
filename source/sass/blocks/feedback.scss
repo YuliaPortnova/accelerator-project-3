@@ -1,0 +1,29 @@
+.feedback {
+  padding: 40px 15px;
+
+  background-color: var(--white, #ffffff);
+}
+
+.feedback__title {
+  margin: 0 0 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--primary, #316dc2);
+}
+
+.feedback__text {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 0 25px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.feedback__button {
+  justify-content: center;
+  width: 100%;
+}
