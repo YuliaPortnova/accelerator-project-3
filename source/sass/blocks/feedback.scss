@@ -2,28 +2,56 @@
   padding: 40px 15px;
 
   background-color: var(--white, #ffffff);
+
+  @media (min-width: $vp-768) {
+    padding: 55px 80px 60px;
+  }
 }
 
 .feedback__title {
   margin: 0 0 10px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
   text-align: center;
   color: var(--primary, #316dc2);
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 17px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .feedback__text {
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 0 25px;
+  padding-right: 20px;
+  padding-left: 20px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 33px;
+    padding: 0;
+
+    font-size: 16px;
+  }
 }
 
 .feedback__button {
   justify-content: center;
   width: 100%;
+
+  @media (min-width: $vp-768) {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 19px 79px 19px 29px;
+  }
 }

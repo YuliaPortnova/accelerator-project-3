@@ -1,10 +1,16 @@
 .form__item {
   display: block;
   margin-bottom: 15px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 21px;
+  }
 }
 
 .form__label {
+  cursor: pointer;
   display: flex;
+  max-width: max-content;
   margin: 0 0 8px;
 
   font-weight: 400;
@@ -14,6 +20,10 @@
   opacity: 0.8;
 
   transition: opacity 0.3s ease;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 16px;
+  }
 }
 
 .form__input {
@@ -28,6 +38,11 @@
   border: 1px solid rgba(72, 72, 72, 0.3);
   border-radius: 8px;
   transition: border-color 0.3s ease;
+
+  @media (min-width: $vp-768) {
+    padding-top: 15px;
+    padding-bottom: 14px;
+  }
 
   &:hover {
     border-color: var(--text, #484848);
@@ -71,6 +86,10 @@
 
   grid-template-columns: 20px 1fr;
   margin-bottom: 25px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 31px;
+  }
 }
 
 .form__checkbox {
@@ -87,6 +106,10 @@
   cursor: pointer;
 
   appearance: none;
+
+  @media (min-width: $vp-768) {
+    margin-top: -3px;
+  }
 }
 
 .form__checkbox-label {
@@ -96,4 +119,5 @@
   line-height: 14px;
 
   opacity: 0.9;
+  cursor: pointer;
 }

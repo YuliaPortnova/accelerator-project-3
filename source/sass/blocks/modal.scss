@@ -20,6 +20,10 @@
   width: 290px;
 
   border-radius: 16px;
+
+  @media (min-width: $vp-768) {
+    width: 510px;
+  }
 }
 
 .modal__close-button {
