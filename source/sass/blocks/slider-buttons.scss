@@ -1,0 +1,74 @@
+// .slider-buttons {
+//   display: flex;
+//   flex-wrap: wrap;
+
+//   gap: 4px;
+// }
+
+// .slider-buttons__button {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 37px;
+//   height: 35px;
+
+//   color: var(--white-100, #ffffff);
+
+//   background-color: var(--additional-100, #0266c1);
+//   border: 1px solid transparent;
+//   border-radius: 0;
+//   cursor: pointer;
+
+//   transition: border-color 0.4s ease, background-color 0.4s ease;
+
+//   --arrow-color: var(--white-100, #ffffff);
+
+//   &:hover {
+//     background-color: var(--white-100, #ffffff);
+//     border-color: var(--active, #1c3374);
+
+//     --arrow-color: var(--active, #1c3374);
+//   }
+
+//   &:focus-visible {
+//     background-color: var(--white-100, #ffffff);
+//     border-color: transparent;
+
+//     --arrow-color: var(--active, #1c3374);
+//   }
+
+//   &:active {
+//     background-color: var(--active, #1c3374);
+//     border-color: var(--active, #1c3374);
+
+//     --arrow-color: var(--white-100, #ffffff);
+//   }
+
+//   &:disabled {
+//     background-color: var(--disabled, #999999);
+//     border-color: var(--disabled, #999999);
+//     cursor: default;
+
+//     --arrow-color: var(--white-100, #ffffff);
+//   }
+
+//   &::before {
+//     content: "";
+
+//     display: block;
+//     width: 14px;
+//     height: 9px;
+
+//     background-color: var(--arrow-color);
+
+//     transition: background-color 0.4s ease;
+
+//     mask-image: url("../__spritemap#sprite-arrow-right-view");
+//     mask-position: center;
+//     mask-repeat: no-repeat;
+//   }
+// }
+
+// .slider-buttons__button--prev::before {
+//   transform: rotate(180deg);
+// }
