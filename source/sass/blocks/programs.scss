@@ -3,21 +3,58 @@
   flex-direction: column;
   padding-top: 55px;
   padding-bottom: 50px;
+
+  @media (min-width: $vp-768) {
+    display: block;
+    padding-top: 50px;
+    padding-right: 0;
+  }
 }
 
 .programs__title {
   margin: 0;
   padding-right: 65px;
+
+  @media (min-width: $vp-768) {
+    display: inline-flex;
+    width: 61%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    vertical-align: middle;
+  }
+}
+
+.programs__slider-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @media (min-width: $vp-768) {
+    top: initial;
+    right: 45px;
+    bottom: -6px;
+
+    gap: 10px;
+  }
 }
 
 .programs__slider-wrapper {
   position: relative;
 
   margin-top: -20px;
+
+  @media (min-width: $vp-768) {
+    margin-top: 0;
+  }
 }
 
 .programs__slider.swiper {
   padding-top: 55px;
+
+  @media (min-width: $vp-768) {
+    padding-top: 40px;
+  }
 }
 
 .programs__all-link {
@@ -25,14 +62,35 @@
   order: 1;
   width: 205px;
   margin-bottom: 10px;
+
+  @media (min-width: $vp-768) {
+    display: inline-flex;
+    justify-content: start;
+    order: 0;
+    width: 32.5%;
+    margin-right: 43px;
+    padding: 20px 60px 20px 27px;
+
+    vertical-align: middle;
+  }
 }
 
 .programs__all-link:last-of-type {
   margin-bottom: 0;
 }
 
-.programs__scrollbar {
+.programs__scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
   display: none;
+
+  @media (min-width: $vp-768) {
+    display: block;
+    width: calc(78% - 2* var(--swiper-scrollbar-sides-offset, 1%));
+
+    --swiper-scrollbar-bg-color: var(--blue-overlay, rgba(49, 109, 194, 0.2));
+    --swiper-scrollbar-drag-bg-color: var(--primary, #316dc2);
+    --swiper-scrollbar-size: 2px;
+    --swiper-scrollbar-sides-offset: 0.01%;
+  }
 }
 
 .programs__slider-list {
@@ -40,6 +98,11 @@
   padding: 0;
 
   list-style-type: none;
+
+
+  @media (min-width: $vp-768) {
+    padding-bottom: 27px;
+  }
 }
 
 .swiper-slide.programs__slide {
@@ -56,6 +119,11 @@
   background-position: left 50% top 30%;
   background-size: cover;
   border-radius: 12px;
+
+  @media (min-width: $vp-768) {
+    min-height: 420px;
+    padding: 10px 20px;
+  }
 
   &--internships {
     background-image: url("../img/background/programs-internships-mobile@1x.jpg");
@@ -158,6 +226,13 @@
   background-color: var(--white, #ffffff);
   border-radius: 12px 12px 0 0;
 
+  @media (min-width: $vp-768) {
+    min-width: 173px;
+
+    font-size: 20px;
+    line-height: 14px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -183,6 +258,16 @@
 
   background-color: var(--white, #ffffff);
   border-radius: 0 12px 12px 12px;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    align-items: center;
+    min-width: 284px;
+    min-height: 87px;
+    padding-right: 70px;
+
+    gap: 10px;
+  }
 }
 
 .programs__slide p {
@@ -190,6 +275,13 @@
 
   font-size: 12px;
   line-height: 14px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 0;
+
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .programs__slide p:last-of-type {
@@ -200,4 +292,8 @@
   position: absolute;
   top: 18px;
   right: 18px;
+
+  @media (min-width: $vp-768) {
+    top: 27px;
+  }
 }

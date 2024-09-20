@@ -10,6 +10,8 @@ const initProgramsSlider = () => {
     modules: [Navigation, Scrollbar],
     scrollbar: {
       el: ".swiper-scrollbar",
+      dragSize: 326,
+      draggable: true,
     },
     navigation: {
       nextEl: '.programs__slider-buttons .swiper-button-next',
@@ -27,7 +29,7 @@ const initProgramsSlider = () => {
       },
       768: {
         allowTouchMove: true,
-        slidesPerView: 2,
+        slidesPerView: 2.127,
       },
       1440: {
         slidesPerView: 3,
