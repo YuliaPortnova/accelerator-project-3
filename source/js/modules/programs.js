@@ -26,6 +26,7 @@ const initProgramsSlider = () => {
     breakpoints: {
       320: {
         allowTouchMove: true,
+        slidesPerView: 1,
       },
       768: {
         allowTouchMove: true,
@@ -35,6 +36,9 @@ const initProgramsSlider = () => {
         slidesPerView: 3,
         spaceBetween: 32,
         allowTouchMove: false,
+        scrollbar: {
+          dragSize: 394,
+        },
       }
     },
 
