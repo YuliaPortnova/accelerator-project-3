@@ -19,67 +19,67 @@
 
 <body class="page">
   <header class="header">
-      <div class="header__container page__container">
-        <div class="header__logo logo">
-          <img class="logo__img" src="/__spritemap#sprite-logo-view" alt="Логотип проекта «Стажировка»." width="30" height="30">
-        </div>
-        <nav class="header__menu">
-          <button class="header__menu-button button button--burger" type="button">Меню</button>
-          <ul class="header__menu-list" aria-hidden="true">
-            <!-- Для отображения состояния текущей страницы добавьте ссылке класс header__link--current -->
-            <li class="header__menu-item">
-              <a class="header__link" href="#about">О проекте</a>
-            </li>
-            <li class="header__menu-item">
-              <button class="header__list-button" type="button">Программы</button>
-              <ul class="header__menu-inner-list">
-                <li class="header__menu-item">
-                  <a class="header__link" href="#">Стажировки</a>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__link" href="#">Волонтёрство</a>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__link" href="#">Учёба</a>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__link" href="#">Религия</a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__menu-item">
-              <a class="header__link" href="#">Как поехать</a>
-            </li>
-            <li class="header__menu-item">
-              <a class="header__link" href="#">Отзывы</a>
-            </li>
-            <li class="header__menu-item">
-              <button class="header__list-button" type="button">Новости</button>
-              <ul class="header__menu-inner-list">
-                <li class="header__menu-item">
-                  <a class="header__link" href="#">Общее</a>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__link" href="#">Волонтёрство</a>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__link" href="#">Стажировки</a>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__link" href="#">Карьера</a>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__link" href="#">Путешествия</a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__menu-item">
-              <a class="header__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+    <div class="header__container page__container">
+      <div class="header__logo logo">
+        <img class="logo__img" src="/__spritemap#sprite-logo-view" alt="Логотип проекта «Стажировка»." width="30" height="30">
       </div>
-    </header>
+      <nav class="header__menu">
+        <button class="header__menu-button button button--burger" type="button">Меню</button>
+        <ul class="header__menu-list" aria-hidden="true">
+          <!-- Для отображения состояния текущей страницы добавьте ссылке класс header__link--current -->
+          <li class="header__menu-item">
+            <a class="header__link" href="#about">О проекте</a>
+          </li>
+          <li class="header__menu-item">
+            <button class="header__list-button" type="button">Программы</button>
+            <ul class="header__menu-inner-list">
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Стажировки</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Волонтёрство</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Учёба</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Религия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__link" href="#">Как поехать</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__link" href="#">Отзывы</a>
+          </li>
+          <li class="header__menu-item">
+            <button class="header__list-button" type="button">Новости</button>
+            <ul class="header__menu-inner-list">
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Общее</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Волонтёрство</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Стажировки</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Карьера</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__link" href="#">Путешествия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <main class="page__main">
     <h1 class="visually-hidden">Проект «Стажировка».</h1>
     <section data-test="hero" class="page__hero hero swiper">
@@ -160,39 +160,48 @@
       <div class="programs__container page__container">
         <h2 class="programs__title title">Программы</h2>
         <a class="programs__all-link button button--arrow" href="#">Все программы</a>
-        <div class="programs__slider swiper">
-          <div class="programs__slider-buttons slider-buttons">
-            <button class="slider-buttons__button slider-buttons__button--prev swiper-button-prev" type="button" disabled>
-              <span class="visually-hidden">Показать предыдущий слайд.</span>
-            </button>
-            <button class="slider-buttons__button slider-buttons__button--next swiper-button-next" type="button">
-              <span class="visually-hidden">Показать следующий слайд.</span>
-            </button>
+        <div class="programs__slider-wrapper">
+          <div class="programs__slider swiper">
+            <div class="programs__slider-buttons slider-buttons">
+              <button class="slider-buttons__button slider-buttons__button--prev swiper-button-prev" type="button" disabled>
+                <span class="visually-hidden">Показать предыдущий слайд.</span>
+              </button>
+              <button class="slider-buttons__button slider-buttons__button--next swiper-button-next" type="button">
+                <span class="visually-hidden">Показать следующий слайд.</span>
+              </button>
+            </div>
+            <!-- Для показа состояния disabled у ссылки button-icon добавьте класс button-icon--disabled -->
+            <ul class="programs__slider-list swiper-wrapper">
+              <li class="programs__slide programs__slide--internships swiper-slide">
+                <h3 class="programs__slide-title">Стажировки</h3>
+                <div class="programs__slide-wrapper">
+                  <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                  <a class="programs__slide-link button-icon button-icon--arrow" href="#">
+                    <span class="visually-hidden">Перейти на страницу с подробным описанием.</span>
+                  </a>
+                </div>
+              </li>
+              <li class="programs__slide programs__slide--volunteering swiper-slide">
+                <h3 class="programs__slide-title">Волонтёрство</h3>
+                <div class="programs__slide-wrapper">
+                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                  <a class="programs__slide-link button-icon button-icon--arrow" href="#">
+                    <span class="visually-hidden">Перейти на страницу с подробным описанием.</span>
+                  </a>
+                </div>
+              </li>
+              <li class="programs__slide programs__slide--studies swiper-slide">
+                <h3 class="programs__slide-title">Учёба</h3>
+                <div class="programs__slide-wrapper">
+                  <p>Получите образование и измените своё будущее.</p>
+                  <a class="programs__slide-link button-icon button-icon--arrow" href="#">
+                    <span class="visually-hidden">Перейти на страницу с подробным описанием.</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <div class="programs__scrollbar swiper-scrollbar"></div>
           </div>
-          <ul class="programs__slider-list swiper-wrapper">
-            <li class="programs__slide swiper-slide">
-              <h3 class="programs__slide-title">Стажировки</h3>
-              <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
-              <a class="programs__slide-link button button--arrow" href="#">
-                <span class="visually-hidden">Перейти на страницу с подробным описанием.</span>
-              </a>
-            </li>
-            <li class="programs__slide swiper-slide">
-              <h3 class="programs__slide-title">Волонтёрство</h3>
-              <p>Помогайте другим и развивайте свои лидерские качества.</p>
-              <a class="programs__slide-link button button--arrow" href="#">
-                <span class="visually-hidden">Перейти на страницу с подробным описанием.</span>
-              </a>
-            </li>
-            <li class="programs__slide swiper-slide">
-              <h3 class="programs__slide-title">Учёба</h3>
-              <p>Получите образование и измените своё будущее.</p>
-              <a class="programs__slide-link button button--arrow" href="#">
-                <span class="visually-hidden">Перейти на страницу с подробным описанием.</span>
-              </a>
-            </li>
-          </ul>
-          <div class="swiper-scrollbar"></div>
         </div>
       </div>
     </section>
@@ -203,7 +212,7 @@
     <div data-test="contacts">contacts</div>
     <div data-test="form">form</div>
   </main>
-  <footer class="page__footer footer" data-test="footer">
+  <footer class="page__footer footer" data-test="footer">футер
     <!-- пример использования спрайта -->
     <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
