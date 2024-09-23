@@ -15,14 +15,15 @@ const initNews = (data) => {
         return slide.topic == news.currentTab;
       });
     }
-    renderSlides(currentData);
-  }
 
-  tabButtons.forEach((button) => {
-    button.addEventListener('click', onButtonClick);
-  })
+  renderSlides(currentData);
+}
 
-  tabButtons[0].click();
+tabButtons.forEach((button) => {
+  button.addEventListener('click', onButtonClick);
+})
+
+tabButtons[0].click();
 }
 
 export { initNews };

@@ -58,13 +58,16 @@ const initNewsSlider = () => {
       320: {
         allowTouchMove: true,
         slidesPerView: 1,
+        slidesPerGroup: 1,
         grid: {
           rows: 2,
         },
       },
       768: {
         allowTouchMove: true,
-        slidesPerView: 4,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 30,
         grid: {
           rows: 2,
         },

@@ -242,35 +242,37 @@
       </div>
     </section>
     <section class="news" data-test="news">
-      <h2 class="news__title title">Новости и материалы</h2>
-      <ul class="news__tabs-list">
-        <li class="news__tabs-item">
-          <button class="news__tab" data-topic="all" type="button">Общее</button>
-        </li>
-        <li class="news__tabs-item">
-          <button class="news__tab" data-topic="volunteering" type="button">Волонтерство</button>
-        </li>
-        <li class="news__tabs-item">
-          <button class="news__tab" data-topic="internships" type="button">Стажировки</button>
-        </li>
-        <li class="news__tabs-item">
-          <button class="news__tab" data-topic="career" type="button">Карьера</button>
-        </li>
-        <li class="news__tabs-item">
-          <button class="news__tab" data-topic="trips" type="button">Путешествия</button>
-        </li>
-      </ul>
-      <div class="news__slider swiper">
-        <ul class="news__slider-list swiper-wrapper"></ul>
-        <div class="news__slider-buttons slider-buttons">
-          <button class="slider-buttons__button slider-buttons__button--prev swiper-button-prev" type="button" disabled>
-            <span class="visually-hidden">Показать предыдущую страницу.</span>
-          </button>
-          <button class="slider-buttons__button slider-buttons__button--next swiper-button-next" type="button">
-            <span class="visually-hidden">Показать следующую страницу.</span>
-          </button>
+      <div class="news__wrapper">
+        <h2 class="news__title title">Новости и материалы</h2>
+        <ul class="news__tabs-list">
+          <li class="news__tabs-item">
+            <button class="news__tab" data-topic="all" type="button">Общее</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab" data-topic="volunteering" type="button">Волонтерство</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab" data-topic="internships" type="button">Стажировки</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab" data-topic="career" type="button">Карьера</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab" data-topic="trips" type="button">Путешествия</button>
+          </li>
+        </ul>
+        <div class="news__slider swiper">
+          <ul class="news__slider-list swiper-wrapper"></ul>
+          <div class="news__slider-buttons slider-buttons">
+            <button class="slider-buttons__button slider-buttons__button--prev swiper-button-prev" type="button" disabled>
+              <span class="visually-hidden">Показать предыдущую страницу.</span>
+            </button>
+            <button class="slider-buttons__button slider-buttons__button--next swiper-button-next" type="button">
+              <span class="visually-hidden">Показать следующую страницу.</span>
+            </button>
+          </div>
+          <div class="news__pagination swiper-pagination"></div>
         </div>
-        <div class="news__pagination swiper-pagination"></div>
       </div>
     </section>
     <div data-test="FAQ">FAQ</div>
