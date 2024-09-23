@@ -1,7 +1,6 @@
 import Swiper from 'swiper';
 import {Navigation, Pagination, Grid} from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/grid';
 
 const tabButtons = document.querySelectorAll('.news__tab');
@@ -11,7 +10,13 @@ const container = document.querySelector('.news__slider-list');
 
 const renderTabs = (currentTab) => {
   tabButtons.forEach((button) => {
-    button.classList.toggle('is-current', currentTab == button.dataset.topic);
+    const isCurrent = (currentTab == button.dataset.topic);
+    button.classList.toggle('is-current', isCurrent);
+    if (isCurrent) {
+      button.setAttribute('tabindex', '-1');
+    } else {
+      button.setAttribute('tabindex', '0');
+    }
   })
 };
 
@@ -27,14 +32,21 @@ const createSlides = (data) => data.map((properties) => {
 });
 
 const initNewsSlider = () => {
-  const newsSlider = new Swiper('.news__slider', {
+  new Swiper('.news__slider', {
     modules: [Navigation, Pagination, Grid],
     navigation: {
       nextEl: '.news__slider-buttons .swiper-button-next',
       prevEl: '.news__slider-buttons .swiper-button-prev',
     },
+    pagination: {
+      el: ".news__pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<button class="' + className + '" type="button" aria-label="Показать страницу ' + (index + 1) + '.">' + (index + 1) + "</button>";
+      },
+    },
     watchOverflow: true,
-    spaceBetween: 30,
+    spaceBetween: 20,
     lazy: true,
     lazyPreloadPrevNext: 1,
     preventClicks: true,
@@ -45,15 +57,24 @@ const initNewsSlider = () => {
     breakpoints: {
       320: {
         allowTouchMove: true,
-        slidesPerView: 'auto',
+        slidesPerView: 1,
+        grid: {
+          rows: 2,
+        },
       },
       768: {
         allowTouchMove: true,
         slidesPerView: 4,
+        grid: {
+          rows: 2,
+        },
       },
       1440: {
         slidesPerView: 3,
         allowTouchMove: false,
+        grid: {
+          rows: 1,
+        },
       }
     },
   });
