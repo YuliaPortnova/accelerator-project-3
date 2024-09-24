@@ -1,7 +1,14 @@
 .faq__container {
   margin-top: 50px;
   margin-bottom: 50px;
+
   background-color: var(--beige, #f0efe9);
+}
+
+.faq__title {
+  margin: 0 0 29px;
+
+  text-align: center;
 }
 
 .faq__list {
@@ -16,6 +23,9 @@
 
 .faq__item {
   position: relative;
+
+  overflow: hidden;
+
   border: 2px solid var(--primary, #316dc2);
   border-radius: 14px;
 }
@@ -33,24 +43,49 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
   transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-white, #ffffff);
+  }
+
+  &:focus-visible {
+    background-color: var(--color-white, #ffffff);
+  }
+
+  &:active {
+    background-color: var(--color-white, #ffffff);
+    color: var(--state-active,  #275699);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 .faq__question.is-active {
+  color: var(--color-white, #ffffff);
   background-color: var(--primary, #316dc2);
+
+  &:active {
+    background-color: var(--state-active,  #275699);
+  }
 }
 
 .faq__question b {
-  display: block;
-  // display: grid;
-  // align-items: start;
-  // min-height: 40px;
+  display: grid;
+  align-items: start;
+  min-height: 40px;
   margin: 0;
-  padding: 0;
+  padding: 0 55px 0 0;
 
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 
@@ -62,23 +97,25 @@
 
   font-size: 14px;
   line-height: 20px;
-
-  opacity: 0;
   color: var(--beige, #f0efe9);
+  background-color: transparent;
 
-  transition: opacity 0.3s ease, max-height 0.3s ease, margin-top 0.3s ease;
+  transition: max-height 0.3s ease, background-color 0.3s ease;
 }
 
 .faq__question.is-active + p {
-  margin-top: 20px;
+  background-color: var(--primary, #316dc2);
+  padding: 0 15px 20px;
+}
 
-  opacity: 1;
+.faq__question.is-active:active + p {
+  background-color: var(--state-active,  #275699);
 }
 
 .faq__close-icon {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 15px;
 
   display: flex;
   justify-content: center;
@@ -87,6 +124,7 @@
   height: 40px;
 
   color: var(--color-white, #ffffff);
+
   background-color: var(--primary, #316dc2);
   border: 1px solid var(--primary, #316dc2);
   border-radius: 50%;
@@ -122,9 +160,24 @@
 }
 
 .faq__question:hover .faq__close-icon {
+  color: var(--primary, #316dc2);
+
   background-color: transparent;
   border-color: var(--primary, #316dc2);
-  color: var(--primary, #316dc2);
+}
+
+.faq__question.is-active:hover .faq__close-icon {
+  color: var(--color-white, #ffffff);
+
+  background-color: transparent;
+  border-color: var(--color-white, #ffffff);
+}
+
+.faq__question.is-active:focus-visible .faq__close-icon {
+  color: var(--color-white, #ffffff);
+
+  background-color: transparent;
+  border-color: var(--color-white, #ffffff);
 }
 
 .faq__question:focus-visible {
@@ -132,30 +185,40 @@
 }
 
 .faq__question:focus-visible .faq__close-icon {
+  color: var(--primary, #316dc2);
+
   background-color: transparent;
   border-color: var(--primary, #316dc2);
-  color: var(--primary, #316dc2);
 }
 
 .faq__question:disabled .faq__close-icon {
+  color: #dddfe2;
+
   background-color: var(--state-disabled, #a9afb7);
   border-color: var(--state-disabled, #a9afb7);
-  color: #dddfe2;
-}
-
-.faq__question:active .faq__close-icon {
-  background-color: var(--state-active, #275699);
-  border-color: var(--state-active, #275699);
-  color: var(--color-white, #ffffff);
 }
 
 .faq__question.is-active .faq__close-icon {
+  color: var(--primary, #316dc2);
+
   background-color: var(--color-white, #ffffff);
   border-color: var(--color-white, #ffffff);
-  color: var(--primary, #316dc2);
 
   &::after {
     display: none;
   }
 }
 
+.faq__question:active .faq__close-icon {
+  color: var(--color-white, #ffffff);
+
+  background-color: var(--state-active, #275699);
+  border-color: var(--state-active, #275699);
+}
+
+.faq__question.is-active:active .faq__close-icon {
+  color: var(--state-active, #275699);
+
+  background-color: var(--color-white, #ffffff);
+  border-color: var(--color-white, #ffffff);
+}
