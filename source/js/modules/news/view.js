@@ -45,7 +45,6 @@ const initNewsSlider = () => {
         return '<button class="' + className + '" type="button" aria-label="Показать страницу ' + (index + 1) + '.">' + (index + 1) + "</button>";
       },
     },
-    watchOverflow: true,
     spaceBetween: 20,
     lazy: true,
     lazyPreloadPrevNext: 1,
@@ -73,8 +72,10 @@ const initNewsSlider = () => {
         },
       },
       1440: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
+        slidesPerGroup: 3,
         allowTouchMove: false,
+        spaceBetween: 32,
         grid: {
           rows: 1,
         },
