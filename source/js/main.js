@@ -5,6 +5,7 @@ import { initProgramsSlider } from './modules/programs.js';
 import { initNews } from './modules/news/control.js';
 import { newsData } from './newsData.js';
 import { initFaq } from './modules/faq.js';
+import {initReviewsSlider} from './modules/reviews.js';
 
 const modalFeedback = document.querySelector('.modal--feedback');
 const feedbackOpenButton = document.querySelector('.about__button');
@@ -14,3 +15,4 @@ createModal(modalFeedback, feedbackOpenButton);
 initProgramsSlider();
 initNews(newsData);
 initFaq();
+initReviewsSlider();
