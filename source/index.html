@@ -318,7 +318,77 @@
         </ul>
       </div>
     </section>
-    <div data-test="reviews">reviews</div>
+    <section class="reviews" data-test="reviews">
+      <div class="reviews__container page__container swiper">
+        <h2 class="reviews__title title">Отзывы</h2>
+        <div class="reviews__slider-buttons slider-buttons">
+          <button class="slider-buttons__button slider-buttons__button--prev swiper-button-prev" type="button" disabled>
+            <span class="visually-hidden">Показать предыдущий слайд.</span>
+          </button>
+          <button class="slider-buttons__button slider-buttons__button--next swiper-button-next" type="button">
+            <span class="visually-hidden">Показать следующий слайд.</span>
+          </button>
+        </div>
+        <ul class="reviews__slider-list swiper-wrapper">
+          <li class="reviews__slide swiper-slide">
+            <div class="reviews__review">
+              <div class="reviews__author">
+                <div class="reviews__author-img-container">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/content/review-alex-tablet@1x.webp 1x, img/content/review-alex-tablet@2x.webp 2x" width="90" height="90">
+                    <source type="image/webp" srcset="img/content/review-alex-mobile@1x.webp 1x, img/content/review-alex-mobile@2x.webp 2x" width="60" height="60">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="img/content/review-alex-tablet@1x.jpg 1x, img/content/review-alex-tablet@2x.jpg 2x" width="90" height="90">
+                    <img src="img/content/review-alex-mobile-mobile@1x.jpg" srcset="img/content/review-alex-mobile-mobile@2x.jpg 2x" width="60" height="60" alt="">
+                  </picture>
+                </div>
+                <p class="reviews__author-name">Лола Алекс</p>
+              </div>
+              <dl class="reviews__info">
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Программа</dt>
+                  <dd class="reviews__info-definition">Masa Art Challenge</dd>
+                </div>
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Дата</dt>
+                  <dd class="reviews__info-definition">Осень 2022</dd>
+                </div>
+              </dl>
+              <em class="reviews__title">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</em>
+              <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную благодарность за предоставленную мне возможность.</p>
+            </div>
+          </li>
+          <li class="reviews__slide swiper-slide">
+            <div class="reviews__review">
+              <div class="reviews__author">
+                <div class="reviews__author-img-container">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/content/review-ivanov-tablet@1x.webp 1x, img/content/review-ivanov-tablet@2x.webp 2x" width="90" height="90">
+                    <source type="image/webp" srcset="img/content/review-ivanov-mobile@1x.webp 1x, img/content/review-ivanov-mobile@2x.webp 2x" width="60" height="60">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="img/content/review-ivanov-tablet@1x.jpg 1x, img/content/review-ivanov-tablet@2x.jpg 2x" width="90" height="90">
+                    <img src="img/content/review-ivanov-mobile@1x.jpg" srcset="img/content/review-ivanov-mobile-mobile@2x.jpg 2x" width="60" height="60" alt="">
+                  </picture>
+                </div>
+                <p class="reviews__author-name">Давид Иванов</p>
+              </div>
+              <dl class="reviews__info">
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Программа</dt>
+                  <dd class="reviews__info-definition">Volunteer Chance</dd>
+                </div>
+                <div class="reviews__info-group">
+                  <dt class="reviews__info-title">Дата</dt>
+                  <dd class="reviews__info-definition">Лето 2022</dd>
+                </div>
+              </dl>
+              <em class="reviews__title">Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.</em>
+              <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="reviews__scrollbar slider-scrollbar swiper-scrollbar"></div>
+      </div>
+    </section>
+
     <div data-test="contacts">contacts</div>
     <div data-test="form">form</div>
   </main>
