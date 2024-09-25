@@ -139,13 +139,14 @@
 
   @media (min-width: $vp-768) {
     width: 678px;
-    padding-bottom: 50px;
+    padding-bottom: 55px;
     padding-right: 0;
     padding-left: 0;
   }
 
   @media (min-width: $vp-1440) {
     width: 1240px;
+    padding-bottom: 50px;
   }
 }
 
