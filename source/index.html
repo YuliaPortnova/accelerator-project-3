@@ -409,8 +409,38 @@
         <div class="reviews__scrollbar slider-scrollbar swiper-scrollbar"></div>
       </div>
     </section>
-
-    <div data-test="contacts">contacts</div>
+    <section class="contacts" data-test="contacts">
+      <div class="contacts__container page__container">
+        <h2 class="contacts__title title" data-title="Контакты">Контакты</h2>
+        <address class="contacts__info">
+          <ul class="contacts__list">
+            <!-- Для показа состояния disabled добавьте ссылке класс .contacts__link--disabled -->
+            <li class="contacts__item">
+              <p class="contacts__subtitle">Центральный офис</p>
+              <p class="contacts__text">г. Новосибирск, ул. Щетинкина 68, культурный центр</p>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__subtitle">Телефон</p>
+              <a class="contacts__link contacts__text" href="tel:+796387687676">+7 963 876 876 76</a>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__subtitle">Email</p>
+              <a class="contacts__link contacts__text" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+            </li>
+          </ul>
+        </address>
+      </div>
+      <div class="contacts__map-wrapper">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/map/map-desktop@1x.webp 1x, img/content/map/map-desktop@2x.webp 2x" width="600" height="324">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/content/map/map-tablet@1x.webp 1x, img/content/map/map-tablet@2x.webp 2x" width="768" height="340">
+          <source type="image/webp" srcset="img/content/map/map-mobile@1x.webp 1x, img/content/map/map-mobile@2x.webp 2x" width="320" height="343">
+          <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/content/map/map-desktop@1x.png 1x, img/content/map/map-desktop@2x.png 2x" width="600" height="324">
+          <source type="image/jpeg" media="(min-width: 768px)" srcset="img/content/map/map-tablet@1x.png 1x, img/content/map/map-tablet@2x.png 2x" width="768" height="340">
+          <img class="contacts__map" src="img/content/map/map-mobile@1x.png" srcset="img/content/map/map-mobile@2x.png 2x" width="320" height="343" alt="Наш адрес на карте: г. Москва, пр-т Мира, д. 14, офис 101. Станции метро ВДНХ или Академика Королёва.">
+        </picture>
+      </div>
+    </section>
     <div data-test="form">form</div>
   </main>
   <footer class="page__footer footer" data-test="footer">футер
