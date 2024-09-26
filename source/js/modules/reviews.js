@@ -19,6 +19,7 @@ const initReviewsSlider = () => {
     spaceBetween: 30,
     lazy: true,
     lazyPreloadPrevNext: 1,
+    autoHeight: true,
 
     breakpoints: {
       320: {
