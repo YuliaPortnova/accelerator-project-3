@@ -19,7 +19,6 @@ const initReviewsSlider = () => {
     spaceBetween: 30,
     lazy: true,
     lazyPreloadPrevNext: 1,
-    autoHeight: true,
 
     breakpoints: {
       320: {
@@ -28,7 +27,7 @@ const initReviewsSlider = () => {
       },
       768: {
         allowTouchMove: true,
-        slidesPerView: 1.3,
+        slidesPerView: 1.2,
       },
       1440: {
         slidesPerView: 2,
