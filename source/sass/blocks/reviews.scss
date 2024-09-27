@@ -1,5 +1,5 @@
 .reviews__container.swiper {
-  padding: 56px 15px 52px;
+  padding: 56px 15px 51px;
 
   @media (min-width: $vp-768) {
     padding: 50px 45px 112px;
@@ -57,7 +57,7 @@
   display: grid;
   align-content: start;
   min-height: 472px;
-  padding: 30px 15px 31px;
+  padding: 30px 15px 30px;
 
   border: 2px solid var(--primary, #316dc2);
   border-radius: 16px;
@@ -81,7 +81,7 @@
 
 .reviews__author {
   display: grid;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 
   gap: 10px;
   grid-template-columns: 60px 1fr;
@@ -107,7 +107,7 @@
 }
 
 .reviews__author-name {
-  margin: 9px 0 0;
+  margin: 12px 0 0;
 
   font-size: 14px;
   line-height: 18px;
@@ -127,7 +127,7 @@
 
 .reviews__info {
   display: grid;
-  margin: 0 0 25px;
+  margin: 0 0 24px;
 
   gap: 10px;
   grid-template-columns: 1fr 1fr;
@@ -136,6 +136,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 25px;
+    margin-bottom: 25px;
 
     gap: 25px;
   }
@@ -178,7 +179,7 @@
 }
 
 .reviews__review-title {
-  margin: 0 0 19px;
+  margin: 0 0 20px;
 
   font-style: normal;
   font-size: 16px;
