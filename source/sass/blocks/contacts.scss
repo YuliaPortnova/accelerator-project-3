@@ -1,0 +1,99 @@
+.contacts {
+  color: var(--white, #ffffff);
+
+  background-color: var(--primary, #316dc2);
+}
+
+.contacts__container {
+  padding-top: 76px;
+  padding-bottom: 65px;
+}
+
+.contacts__title {
+  margin: 0 0 35px;
+
+  color: var(--white, #ffffff);
+}
+
+.contacts__info {
+  margin-bottom: 22px;
+
+  font-style: normal;
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  gap: 13px;
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 8px;
+}
+
+.contacts__subtitle {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--beige, #f0efe9);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+
+  opacity: 0.8;
+}
+
+.contacts__text {
+  margin: 0;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts__link {
+  color: var(--white, #ffffff);
+
+  transition: color 0.3s ease, text-decoration-color 0.3s ease, opacity 0.3s ease, text-underline-offset 0.3s ease;
+
+  text-decoration-color: transparent;
+  text-underline-offset: 8px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    color: var(--text, #484848);
+
+    opacity: 1;
+
+    text-decoration-color: currentColor;
+    text-underline-offset: 4px;
+  }
+
+  &:active {
+    color: var(--white, #ffffff);
+
+    opacity: 1;
+
+    text-decoration-color: currentColor;
+    text-underline-offset: 4px;
+  }
+}
+
+.contacts__map-wrapper {
+  padding-top: 30px;
+
+  border-top: 2px solid rgba(255, 255, 255, 0.2 );
+}
