@@ -10,6 +10,29 @@
   @media (min-width: $vp-1440) {
     padding-top: 53px;
   }
+
+  &--style-blue {
+    padding: 43px 10px 40px;
+    background-color: var(--blue-overlay, rgba(49, 109, 194, 0.2));
+
+    background-image: url("../../img/background/form-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../img/background/form-mobile@2x.jpg");
+    }
+  }
+}
+
+.feedback__container {
+  .feedback--style-blue & {
+    background-color: var(--primary, #316dc2);
+    color: var(--white, #ffffff);
+    border-radius: 16px;
+    padding: 17px 15px 27px;
+  }
 }
 
 .feedback__title {
@@ -34,6 +57,12 @@
     font-size: 32px;
     line-height: 36px;
   }
+
+  .feedback--style-blue & {
+    color: var(--white, #ffffff);
+    text-align: left;
+    margin: 0 0 12px;
+  }
 }
 
 .feedback__text {
@@ -56,6 +85,14 @@
   @media (min-width: $vp-1440) {
     font-size: 16px;
     line-height: 26px;
+  }
+
+  .feedback--style-blue & {
+    margin-bottom: 21px;
+    color: var(--beige, #f0efe9);
+    text-align: left;
+    padding: 0;
+    opacity: 0.9;
   }
 }
 

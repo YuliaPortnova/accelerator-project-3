@@ -409,7 +409,7 @@
         <div class="reviews__scrollbar slider-scrollbar swiper-scrollbar"></div>
       </div>
     </section>
-    <section class="contacts" data-test="contacts">
+    <section class="contacts page__contacts" data-test="contacts">
       <div class="contacts__container page__container">
         <h2 class="contacts__title title" data-title="Контакты">Контакты</h2>
         <address class="contacts__info">
@@ -440,7 +440,40 @@
         </div>
       </div>
     </section>
-    <div data-test="form">form</div>
+    <section class="feedback feedback--style-blue" data-test="form">
+      <div class="feedback__container page__container">
+        <h2 class="feedback__title">Напишите нам</h2>
+        <p class="feedback__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+        <form class="feedback__form form form--style-blue" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+          <label class="form__item">
+            <span class="form__label">Имя</span>
+            <input class="form__input" type="text" name="name" required>
+          </label>
+          <label class="form__item">
+            <span class="form__label">Телефон</span>
+            <input class="form__input" type="tel" name="tel" required>
+          </label>
+          <label class="form__item">
+            <span class="form__label">Ваше сообщение</span>
+            <textarea class="form__input form__textarea" name="message"></textarea>
+          </label>
+          <label class="form__item">
+            <span class="form__label">Выберите город</span>
+            <select class="form__input form__select" name="city">
+              <option value="not-selected"></option>
+              <option value="Moscow">Москва</option>
+              <option value="Saint-Petersburg">Санкт-Петербург</option>
+              <option value="Nizhny-Novgorod">Нижний Новгород</option>
+            </select>
+          </label>
+          <label class="form__checkbox-item">
+            <input class="form__checkbox" name="personal-data-consent" type="checkbox" required>
+            <span class="form__checkbox-label">Я согласен на обработку моих персональных данных</span>
+          </label>
+          <button class="feedback__button button button--arrow" type="submit">Отправить</button>
+        </form>
+      </div>
+      </section>
   </main>
   <footer class="page__footer footer" data-test="footer">футер
     <!-- пример использования спрайта -->
@@ -463,7 +496,7 @@
         </label>
         <label class="form__item">
           <span class="form__label">Телефон</span>
-          <input class="form__input" type="tel" name="tel" required pattern="[^a-zA-Zа-яА-ЯЁё]+$">
+          <input class="form__input" type="tel" name="tel" required>
         </label>
         <label class="form__item">
           <span class="form__label">Выберите город</span>

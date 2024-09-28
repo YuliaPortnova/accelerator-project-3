@@ -21,7 +21,6 @@
   }
 
   @media (min-width: $vp-1440) {
-    margin-bottom: 37px;
     margin-bottom: 45px;
     margin-left: 3px;
   }
@@ -57,7 +56,7 @@
   display: grid;
   align-content: start;
   min-height: 472px;
-  padding: 30px 15px 30px;
+  padding: 30px 15px;
 
   border: 2px solid var(--primary, #316dc2);
   border-radius: 16px;

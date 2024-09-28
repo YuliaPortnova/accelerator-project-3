@@ -145,7 +145,7 @@
       background-image: url("../img/background/programs-internships-mobile@2x.jpg");
     }
 
-    @media (min-width: 500px) {
+    @media (width >= 500px) {
       background-image: url("../img/background/programs-internships-tablet@1x.jpg");
 
       @media (resolution >= 2dppx) {
@@ -169,7 +169,7 @@
       background-image: url("../img/background/programs-volunteering-mobile@2x.jpg");
     }
 
-    @media (min-width: 500px) {
+    @media (width >= 500px) {
       background-image: url("../img/background/programs-volunteering-tablet@1x.jpg");
 
       @media (resolution >= 2dppx) {
@@ -194,7 +194,7 @@
       background-image: url("../img/background/programs-studies-mobile@2x.jpg");
     }
 
-    @media (min-width: 500px) {
+    @media (width >= 500px) {
       background-image: url("../img/background/programs-studies-tablet@1x.jpg");
 
       @media (resolution >= 2dppx) {
@@ -229,7 +229,7 @@
   min-width: 146px;
   max-width: 200px;
   margin: 0;
-  padding: 18px 18px 6px 18px;
+  padding: 18px 18px 6px;
 
   font-weight: 400;
   font-size: 16px;
@@ -280,7 +280,7 @@
   padding: 12px 64px 15px 18px;
 
   background-color: var(--white, #ffffff);
-  border-radius: 0 12px 12px 12px;
+  border-radius: 0 12px 12px;
 
   @media (min-width: $vp-768) {
     display: grid;

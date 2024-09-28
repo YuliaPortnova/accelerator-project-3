@@ -1,4 +1,4 @@
-import { createAccordions } from "../utils/accordions.js";
+import { createAccordions } from '../utils/accordions.js';
 
 const header = document.querySelector('.header');
 const openButton = header.querySelector('.header__menu-button');
@@ -12,11 +12,11 @@ const onHeaderClick = (event) => {
   if(!event.target.closest('.header__menu')) {
     openButton.click();
   }
-}
+};
 
 const onButtonClick = () => {
   list.style.maxHeight = `${list.scrollHeight + LIST_PADDING + SUBLIST_PADDING}px`;
-}
+};
 
 const initHeader = () => {
   openButton.addEventListener('click', () => {
@@ -36,7 +36,7 @@ const initHeader = () => {
       header.addEventListener('click', onHeaderClick);
       accordionButtons.forEach((button)=> {
         button.addEventListener('click', onButtonClick);
-      })
+      });
     }
   });
 

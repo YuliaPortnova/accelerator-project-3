@@ -85,7 +85,7 @@
 
   &:active {
     background-color: var(--color-white, #ffffff);
-    color: var(--state-active,  #275699);
+    color: var(--state-active, #275699);
   }
 
   &:disabled {
@@ -107,7 +107,7 @@
   }
 
   &:active {
-    background-color: var(--state-active,  #275699);
+    background-color: var(--state-active, #275699);
   }
 }
 
@@ -175,7 +175,7 @@
 }
 
 .faq__question.is-active:active + p {
-  background-color: var(--state-active,  #275699);
+  background-color: var(--state-active, #275699);
 }
 
 .faq__close-icon {

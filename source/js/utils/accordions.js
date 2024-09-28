@@ -8,6 +8,6 @@ const createAccordions = (buttons) => {
       clickedDescription.style.maxHeight = isActive ? `${clickedDescription.scrollHeight}px` : 0;
     });
   });
-}
+};
 
 export { createAccordions };

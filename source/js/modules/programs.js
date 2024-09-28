@@ -9,7 +9,7 @@ const initProgramsSlider = () => {
   const programsSlider = new Swiper('.programs__slider', {
     modules: [Navigation, Scrollbar],
     scrollbar: {
-      el: ".swiper-scrollbar",
+      el: '.swiper-scrollbar',
       dragSize: 326,
       draggable: true,
     },
@@ -51,6 +51,6 @@ const initProgramsSlider = () => {
       },
     },
   });
-}
+};
 
 export { initProgramsSlider };

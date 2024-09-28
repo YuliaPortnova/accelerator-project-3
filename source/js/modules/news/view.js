@@ -17,7 +17,7 @@ const renderTabs = (currentTab) => {
     } else {
       button.setAttribute('tabindex', '0');
     }
-  })
+  });
 };
 
 const createSlides = (data) => data.map((properties) => {
@@ -39,10 +39,10 @@ const initNewsSlider = () => {
       prevEl: '.news__slider-buttons .swiper-button-prev',
     },
     pagination: {
-      el: ".news__pagination",
+      el: '.news__pagination',
       clickable: true,
       renderBullet: function (index, className) {
-        return '<button class="' + className + '" type="button" aria-label="Показать страницу ' + (index + 1) + '.">' + (index + 1) + "</button>";
+        return `<button class="${ className }" type="button" aria-label="Показать страницу ${ index + 1 }.">${ index + 1 }</button>`;
       },
     },
     spaceBetween: 20,
@@ -82,7 +82,7 @@ const initNewsSlider = () => {
       }
     },
   });
-}
+};
 
 const renderSlides = (data) => {
   container.innerHTML = '';

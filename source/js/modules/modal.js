@@ -11,13 +11,13 @@ const openModal = (modal, closeButton) => {
   modal.classList.add('is-open');
   document.body.classList.add('page__modal-open');
   document.addEventListener('keydown', onDocumentKeydown);
-}
+};
 
 const closeModal = (modal) => {
   modal.classList.remove('is-open');
   document.body.classList.remove('page__modal-open');
   document.removeEventListener('keydown', onDocumentKeydown);
-}
+};
 
 const createModal = (modal, openButton) => {
   const closeButton = modal.querySelector('.modal__close-button');

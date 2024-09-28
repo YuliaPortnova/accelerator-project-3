@@ -7,7 +7,7 @@ const initReviewsSlider = () => {
   new Swiper('.reviews__container', {
     modules: [Navigation, Scrollbar],
     scrollbar: {
-      el: ".swiper-scrollbar",
+      el: '.swiper-scrollbar',
       dragSize: 326,
       draggable: true,
     },
@@ -39,6 +39,6 @@ const initReviewsSlider = () => {
       }
     },
   });
-}
+};
 
 export { initReviewsSlider };
