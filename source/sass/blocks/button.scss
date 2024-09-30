@@ -42,10 +42,7 @@
   &::before {
     content: "";
     position: absolute;
-
     top: 50%;
-    transform: translateY(-50%);
-
     right: 4px;
 
     width: 46px;
@@ -53,21 +50,24 @@
 
     background-color: var(--primary, #316dc2);
     border-radius: 50%;
+    transform: translateY(-50%);
+
     transition: background-color 0.3s ease;
   }
 
   &--arrow {
     padding-top: 15px;
-    padding-bottom: 15px;
     padding-right: 58px;
+    padding-bottom: 15px;
 
     font-size: 12px;
     line-height: 12px;
 
     @media (min-width: $vp-768) {
+      padding: 20px 80px 20px 30px;
+
       font-size: 14px;
       line-height: 14px;
-      padding: 20px 80px 20px 30px;
     }
   }
 
@@ -128,6 +128,20 @@
     box-shadow: 0 3px 0 0 var(--white, #ffffff), 0 6px 0 0 var(--white, #ffffff);
 
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  &--blue-background {
+    color: var(--white, #ffffff);
+
+    border-color: var(--white, #ffffff);
+  }
+
+  &--blue-background::before {
+    background-color: var(--white, #ffffff);
+  }
+
+  &--blue-background::after {
+    background-color: var(--primary, #316dc2);
   }
 }
 
@@ -263,4 +277,8 @@
 
 .button--blue-background:focus-visible::after {
   background-color: var(--primary, #316dc2);
+}
+
+.button--blue-background:disabled::after {
+  background-color: var(--white, #ffffff);
 }

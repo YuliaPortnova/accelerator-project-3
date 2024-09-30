@@ -1,5 +1,5 @@
 .feedback {
-  padding: 40px 15px;
+  padding: 37px 15px 40px;
 
   background-color: var(--white, #ffffff);
 
@@ -12,31 +12,46 @@
   }
 
   &--style-blue {
-    padding: 43px 10px 40px;
-    background-color: var(--blue-overlay, rgba(49, 109, 194, 0.2));
+    position: relative;
+    padding: 83px 10px 80px;
+    background-color: var(--beige, #f0efe9);
 
-    background-image: url("../../img/background/form-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 40px;
+      bottom: 40px;
+      left: 0;
+      width: 100%;
+      height: 753px;
 
-    @media (resolution >= 2dppx) {
-      background-image: url("../img/background/form-mobile@2x.jpg");
+      background-image: url("../../img/background/form-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      @media (resolution >= 2dppx) {
+        background-image: url("../img/background/form-mobile@2x.jpg");
+      }
     }
   }
 }
 
 .feedback__container {
   .feedback--style-blue & {
-    background-color: var(--primary, #316dc2);
-    color: var(--white, #ffffff);
-    border-radius: 16px;
+    position: relative;
+    z-index: 1;
     padding: 17px 15px 27px;
+
+    color: var(--white, #ffffff);
+
+    background-color: var(--primary, #316dc2);
+    border-radius: 16px;
   }
 }
 
 .feedback__title {
-  margin: 0 0 10px;
+  margin: 0 0 14px;
 
   font-weight: 400;
   font-size: 18px;
@@ -59,9 +74,10 @@
   }
 
   .feedback--style-blue & {
-    color: var(--white, #ffffff);
-    text-align: left;
     margin: 0 0 12px;
+
+    text-align: left;
+    color: var(--white, #ffffff);
   }
 }
 
@@ -89,9 +105,11 @@
 
   .feedback--style-blue & {
     margin-bottom: 21px;
-    color: var(--beige, #f0efe9);
-    text-align: left;
     padding: 0;
+
+    text-align: left;
+    color: var(--beige, #f0efe9);
+
     opacity: 0.9;
   }
 }
@@ -99,6 +117,8 @@
 .feedback__button {
   justify-content: center;
   width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
 
   @media (min-width: $vp-768) {
     display: block;
@@ -106,5 +126,11 @@
     max-width: 100%;
     margin: 0 auto;
     padding: 19px 79px 19px 29px;
+  }
+
+  .feedback--style-blue & {
+    width: 260px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }

@@ -457,10 +457,10 @@
             <span class="form__label">Ваше сообщение</span>
             <textarea class="form__input form__textarea" name="message"></textarea>
           </label>
-          <label class="form__item">
+          <label class="form__item form__select-item">
             <span class="form__label">Выберите город</span>
             <select class="form__input form__select" name="city">
-              <option value="not-selected"></option>
+              <option value="not-selected" selected disabled></option>
               <option value="Moscow">Москва</option>
               <option value="Saint-Petersburg">Санкт-Петербург</option>
               <option value="Nizhny-Novgorod">Нижний Новгород</option>
@@ -468,9 +468,9 @@
           </label>
           <label class="form__checkbox-item">
             <input class="form__checkbox" name="personal-data-consent" type="checkbox" required>
-            <span class="form__checkbox-label">Я согласен на обработку моих персональных данных</span>
+            <span class="form__checkbox-label">Я согласен на обработку моих персональных<br>данных</span>
           </label>
-          <button class="feedback__button button button--arrow" type="submit">Отправить</button>
+          <button class="feedback__button button button--arrow button--blue-background" type="submit">Отправить</button>
         </form>
       </div>
       </section>
@@ -501,7 +501,7 @@
         <label class="form__item">
           <span class="form__label">Выберите город</span>
           <select class="form__input form__select" name="city">
-            <option value="not-selected"></option>
+            <option value="not-selected" selected disabled></option>
             <option value="Moscow">Москва</option>
             <option value="Saint-Petersburg">Санкт-Петербург</option>
             <option value="Nizhny-Novgorod">Нижний Новгород</option>
