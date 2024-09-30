@@ -77,6 +77,10 @@
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: 12px 12px;
+
+    @media (min-width: $vp-768) {
+      mask-size: 16px 16px;
+    }
   }
 }
 
