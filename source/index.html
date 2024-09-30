@@ -34,47 +34,47 @@
             <button class="header__list-button" type="button">Программы</button>
             <ul class="header__menu-inner-list">
               <li class="header__menu-item">
-                <a class="header__link" href="#">Стажировки</a>
+                <a class="header__link" href="#programs">Стажировки</a>
               </li>
               <li class="header__menu-item">
-                <a class="header__link" href="#">Волонтёрство</a>
+                <a class="header__link" href="#programs">Волонтёрство</a>
               </li>
               <li class="header__menu-item">
-                <a class="header__link" href="#">Учёба</a>
+                <a class="header__link" href="#programs">Учёба</a>
               </li>
               <li class="header__menu-item">
-                <a class="header__link" href="#">Религия</a>
+                <a class="header__link" href="#programs">Религия</a>
               </li>
             </ul>
           </li>
           <li class="header__menu-item">
-            <a class="header__link" href="#">Как поехать</a>
+            <a class="header__link" href="#conditions">Как поехать</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__link" href="#">Отзывы</a>
+            <a class="header__link" href="#reviews">Отзывы</a>
           </li>
           <li class="header__menu-item">
             <button class="header__list-button" type="button">Новости</button>
             <ul class="header__menu-inner-list">
               <li class="header__menu-item">
-                <a class="header__link" href="#">Общее</a>
+                <a class="header__link" href="#news">Общее</a>
               </li>
               <li class="header__menu-item">
-                <a class="header__link" href="#">Волонтёрство</a>
+                <a class="header__link" href="#news">Волонтёрство</a>
               </li>
               <li class="header__menu-item">
-                <a class="header__link" href="#">Стажировки</a>
+                <a class="header__link" href="#news">Стажировки</a>
               </li>
               <li class="header__menu-item">
-                <a class="header__link" href="#">Карьера</a>
+                <a class="header__link" href="#news">Карьера</a>
               </li>
               <li class="header__menu-item">
-                <a class="header__link" href="#">Путешествия</a>
+                <a class="header__link" href="#news">Путешествия</a>
               </li>
             </ul>
           </li>
           <li class="header__menu-item">
-            <a class="header__link" href="#">Контакты</a>
+            <a class="header__link" href="#contacts">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -156,7 +156,7 @@
         </ul>
       </div>
     </section>
-    <section class="programs" data-test="programs">
+    <section class="programs" data-test="programs" id="programs">
       <div class="programs__container page__container">
         <h2 class="programs__title title">Программы</h2>
         <a class="programs__all-link button button--arrow" href="#">Все программы</a>
@@ -214,7 +214,7 @@
         </div>
       </div>
     </section>
-    <section class="conditions" data-test="grant">
+    <section class="conditions" data-test="grant" id="conditions">
       <div class="conditions__container page__container">
         <div class="conditions__wrapper">
           <h2 class="conditions__title title">Как поехать</h2>
@@ -241,7 +241,7 @@
         </div>
       </div>
     </section>
-    <section class="news" data-test="news">
+    <section class="news" data-test="news" id="news">
       <div class="news__wrapper">
         <h2 class="news__title title">Новости и материалы</h2>
         <ul class="news__tabs-list">
@@ -318,7 +318,7 @@
         </ul>
       </div>
     </section>
-    <section class="reviews" data-test="reviews">
+    <section class="reviews" data-test="reviews" id="reviews">
       <div class="reviews__container page__container swiper">
         <h2 class="reviews__title title">Отзывы</h2>
         <div class="reviews__slider-buttons slider-buttons">
@@ -409,7 +409,7 @@
         <div class="reviews__scrollbar slider-scrollbar swiper-scrollbar"></div>
       </div>
     </section>
-    <section class="contacts page__contacts" data-test="contacts">
+    <section class="contacts page__contacts" data-test="contacts" id="contacts">
       <div class="contacts__container page__container">
         <h2 class="contacts__title title" data-title="Контакты">Контакты</h2>
         <address class="contacts__info">
@@ -475,12 +475,54 @@
       </div>
       </section>
   </main>
-  <footer class="page__footer footer" data-test="footer">футер
-    <!-- пример использования спрайта -->
-    <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg> -->
+  <footer class="page__footer footer" data-test="footer">
+    <div class="footer__container page__container">
+      <div class="header__logo logo">
+        <img class="logo__img" src="/__spritemap#sprite-logo-view" alt="Логотип проекта «Стажировка»." width="30" height="30">
+      </div>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link" href="#about">О проекте</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#programs">Программы</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#conditions">Как поехать</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#reviews">Отзывы</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#news">Новости</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+      <div class="footer__wrapper">
+        <a class="footer__link footer__privacy" href="#">Политика конфиденциальности</a>
+        <p class="footer__copyright">Стажировка © 2023 Все права защищены</p>
+      </div>
+      <ul class="footer__social social">
+        <!-- Для показа состояния disabled добавьте ссылке класс social__link--disabled -->
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Проект "Стажировка" во Вконтакте.</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--ok" href="#" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Проект "Стажировка" в одноклассниках.</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--reddit" href="#" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Проект "Стажировка" в Реддит.</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </footer>
   <div class="modal modal--feedback">
     <section class="modal__content feedback">
