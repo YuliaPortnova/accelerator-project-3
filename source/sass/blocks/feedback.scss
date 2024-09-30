@@ -13,8 +13,14 @@
 
   &--style-blue {
     position: relative;
+
     padding: 83px 10px 80px;
+
     background-color: var(--beige, #f0efe9);
+
+    @media (min-width: $vp-768) {
+      padding: 50px 58px;
+    }
 
     &::before {
       content: "";
@@ -22,6 +28,7 @@
       top: 40px;
       bottom: 40px;
       left: 0;
+
       width: 100%;
       height: 753px;
 
@@ -33,20 +40,57 @@
       @media (resolution >= 2dppx) {
         background-image: url("../img/background/form-mobile@2x.jpg");
       }
+
+      @media (min-width: $vp-768) {
+        display: none;
+      }
     }
   }
 }
 
 .feedback__container {
   .feedback--style-blue & {
+    max-width: 400px;
     position: relative;
     z-index: 1;
+
     padding: 17px 15px 27px;
 
     color: var(--white, #ffffff);
 
     background-color: var(--primary, #316dc2);
     border-radius: 16px;
+
+    @media (min-width: $vp-768) {
+      max-width: initial;
+      position: relative;
+
+      padding: 41px var(--padding-right) 36px 40px;
+      --padding-right: 38.4%;
+
+      background-image: url("../../img/background/form-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      @media (resolution >= 2dppx) {
+        background-image: url("../img/background/form-tablet@2x.jpg");
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: calc(100% - var(--padding-right) + 40px);
+      height: 100%;
+
+      background-color: var(--primary, #316dc2);
+      border-radius: 16px;
+    }
   }
 }
 
@@ -78,6 +122,10 @@
 
     text-align: left;
     color: var(--white, #ffffff);
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 31px;
+    }
   }
 }
 
@@ -111,6 +159,10 @@
     color: var(--beige, #f0efe9);
 
     opacity: 0.9;
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -132,5 +184,12 @@
     width: 260px;
     padding-top: 15px;
     padding-bottom: 15px;
+
+    @media (min-width: $vp-768) {
+      width: 352px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin: 0 auto 0 0;
+    }
   }
 }

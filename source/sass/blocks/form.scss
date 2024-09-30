@@ -12,6 +12,51 @@
 
   .form--style-blue & {
     margin-bottom: 21px;
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 18px;
+    }
+  }
+
+  .form--style-blue &:has(textarea) {
+    @media (min-width: $vp-768) {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.form__select-item {
+  .form--style-blue & {
+    @media (min-width: $vp-768) {
+      margin-bottom: 21px;
+    }
+  }
+}
+
+.form__checkbox-item {
+  display: grid;
+  margin-bottom: 23px;
+
+  grid-template-columns: 20px 1fr;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 30px;
+  }
+
+  &:has(.form__checkbox:disabled) {
+    pointer-events: none;
+  }
+
+  .form--style-blue & {
+    margin-bottom: 19px;
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 39px;
+    }
   }
 }
 
@@ -46,6 +91,13 @@
 
     font-size: 12px;
     color: var(--beige, #f0efe9);
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 12px;
+
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -105,6 +157,14 @@
 
     --border-color: rgba(255, 255, 255, 0.3);
 
+    @media (min-width: $vp-768) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      font-size: 14px;
+      line-height: 14px;
+    }
+
     &:hover {
       --border-color: var(--white, #ffffff);
     }
@@ -148,28 +208,9 @@
   min-height: 94px;
 
   resize: none;
-}
-
-.form__checkbox-item {
-  display: grid;
-  margin-bottom: 23px;
-
-  grid-template-columns: 20px 1fr;
 
   @media (min-width: $vp-768) {
-    margin-bottom: 31px;
-  }
-
-  @media (min-width: $vp-1440) {
-    margin-bottom: 30px;
-  }
-
-  &:has(.form__checkbox:disabled) {
-    pointer-events: none;
-  }
-
-  .form--style-blue & {
-    margin-bottom: 19px;
+    min-height: 88px;
   }
 }
 
@@ -232,8 +273,13 @@
 
   .form--style-blue & {
     margin-top: 10px;
+
     background-color: var(--white, #ffffff);
     border-color: var(--white, #ffffff);
+
+    @media (min-width: $vp-768) {
+      margin-top: 0;
+    }
 
     &:hover {
       background-color: transparent;
@@ -317,6 +363,10 @@
 
   .form--style-blue & {
     max-width: 260px;
+
+    @media (min-width: $vp-768) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -371,9 +421,19 @@
 
     background-image: url("../__spritemap#sprite-arrow-down-view");
 
+    @media (min-width: $vp-768) {
+      max-width: 100%;
+    }
+
     &:active,
     &:focus {
       background-image: url("../__spritemap#sprite-arrow-up-view");
     }
+  }
+}
+
+.form__br-mobile {
+  @media (min-width: $vp-768) {
+    display: none;
   }
 }
