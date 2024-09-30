@@ -1,7 +1,7 @@
 .footer__container {
   display: grid;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 41px;
 
   gap: 15px;
   justify-items: center;
@@ -20,7 +20,7 @@
 
   list-style-type: none;
 
-  gap: 20px 30px;
+  gap: 20px 26px;
 }
 
 .footer__link {
@@ -29,8 +29,7 @@
   text-align: center;
   color: var(--text,  #484848);
   text-decoration: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 2px;
   transition: color 0.3s ease, opacity 0.3s ease;
 
   &:hover {
