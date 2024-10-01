@@ -41,6 +41,12 @@
   }
 }
 
+.header-logo {
+  @media (min-width: $vp-768) {
+    margin-top: 2px;
+  }
+}
+
 .is-open .header__logo {
   display: none;
 
