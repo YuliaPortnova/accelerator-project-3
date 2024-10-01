@@ -26,7 +26,7 @@
       <nav class="header__menu">
         <button class="header__menu-button button button--burger" type="button">Меню</button>
         <ul class="header__menu-list" aria-hidden="true">
-          <!-- Для отображения состояния текущей страницы добавьте ссылке класс header__link--current -->
+          <!-- Для отображения состояния текущей страницы добавьте ссылке класс header__link c модификатором current -->
           <li class="header__menu-item">
             <a class="header__link" href="#about">О проекте</a>
           </li>
@@ -127,15 +127,15 @@
     </section>
     <section class="about" data-test="about" id="about">
       <div class="about__container page__container">
-        <div class="about__wrapper">
+        <div>
           <h2 class="about__title title">О проекте «Стажировка»</h2>
-          <p>«Стажировка» — совместный проект правительств и волонтёрских бригад.</p>
+          <b>«Стажировка» — совместный проект правительств и волонтёрских бригад.</b>
         </div>
-        <dl class="about__wrapper">
-          <dt>Наша цель</dt>
-          <dd>Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях карьеры, предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать значимые изменения.</dd>
+        <div class="about__wrapper">
+          <h3>Наша цель</h3>
+          <p>Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях карьеры, предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать значимые изменения.</p>
           <a class="about__button button button--arrow" href="#">Подробнее о проекте</a>
-        </dl>
+        </div>
         <ul class="about__list">
           <li class="about__item">
             <b>Более 250 программ</b>
@@ -170,7 +170,7 @@
                 <span class="visually-hidden">Показать следующий слайд.</span>
               </button>
             </div>
-            <!-- Для показа состояния disabled у ссылки button-icon добавьте класс button-icon--disabled -->
+            <!-- Для показа состояния disabled добавьте ссылке класс button-icon с модификатором disabled -->
             <ul class="programs__slider-list swiper-wrapper">
               <li class="programs__slide programs__slide--internships swiper-slide">
                 <h3 class="programs__slide-title">Стажировки</h3>
@@ -460,7 +460,7 @@
           <label class="form__item form__select-item">
             <span class="form__label">Выберите город</span>
             <select class="form__input form__select" name="city">
-              <option value="not-selected" selected disabled></option>
+              <option value="not-selected" selected disabled label=" "></option>
               <option value="Moscow">Москва</option>
               <option value="Saint-Petersburg">Санкт-Петербург</option>
               <option value="Nizhny-Novgorod">Нижний Новгород</option>
@@ -473,7 +473,7 @@
           <button class="feedback__button button button--arrow button--blue-background" type="submit">Отправить</button>
         </form>
       </div>
-      </section>
+    </section>
   </main>
   <footer class="page__footer footer" data-test="footer">
     <div class="footer__container page__container">
@@ -542,7 +542,7 @@
         <label class="form__item">
           <span class="form__label">Выберите город</span>
           <select class="form__input form__select" name="city">
-            <option value="not-selected" selected disabled></option>
+            <option value="not-selected" selected disabled label=" "></option>
             <option value="Moscow">Москва</option>
             <option value="Saint-Petersburg">Санкт-Петербург</option>
             <option value="Nizhny-Novgorod">Нижний Новгород</option>
