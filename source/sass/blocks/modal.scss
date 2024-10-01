@@ -11,14 +11,14 @@
 
   background-color: var(--dark-overlay, rgba(13, 29, 51, 0.4));
 
-  &.is-open {
-    display: flex;
-  }
-
   @media (min-width: $vp-768) {
     padding-top: 90px;
     align-items: start;
   }
+}
+
+.modal.is-open {
+  display: flex;
 }
 
 .modal__content {

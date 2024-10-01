@@ -8,10 +8,10 @@ const initNews = (data) => {
     news.currentTab = event.target.dataset.topic;
     renderTabs(news.currentTab);
     let currentData;
-    if (news.currentTab == 'all') {
+    if (news.currentTab === 'all') {
       currentData = data;
     } else {
-      currentData = data.filter((slide) => slide.topic == news.currentTab);
+      currentData = data.filter((slide) => slide.topic === news.currentTab);
     }
 
     renderSlides(currentData);

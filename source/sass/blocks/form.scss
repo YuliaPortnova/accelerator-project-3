@@ -326,10 +326,12 @@
     }
 
     &:disabled {
-      background-color: rgba(255, 255, 255, 0.6);
-      border-color: var(--white, #ffffff);
+      background-color: var(--state-disabled, #a9afb7);
+      border-color: var(--state-disabled, #a9afb7);
 
       pointer-events: none;
+
+      --icon-color: rgba(255, 255, 255, 0.7);
     }
   }
 }
@@ -354,13 +356,6 @@
   opacity: 1;
 
   --icon-color: var(--primary, #316dc2);
-}
-
-.form--style-blue .form__checkbox:disabled {
-  background-color: var(--state-disabled, #a9afb7);
-  border-color: var(--state-disabled, #a9afb7);
-
-  --icon-color: var(--white, #ffffff);
 }
 
 .form__checkbox:checked:hover,

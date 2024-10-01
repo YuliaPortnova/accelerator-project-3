@@ -10,7 +10,7 @@ const container = document.querySelector('.news__slider-list');
 
 const renderTabs = (currentTab) => {
   tabButtons.forEach((button) => {
-    const isCurrent = (currentTab == button.dataset.topic);
+    const isCurrent = (currentTab === button.dataset.topic);
     button.classList.toggle('is-current', isCurrent);
     if (isCurrent) {
       button.setAttribute('tabindex', '-1');

@@ -3,7 +3,7 @@ import { initHeader } from './modules/header.js';
 import { createModal } from './modules/modal.js';
 import { initProgramsSlider } from './modules/programs.js';
 import { initNews } from './modules/news/control.js';
-import { newsData } from './newsData.js';
+import { newsData } from './news-data.js';
 import { initFaq } from './modules/faq.js';
 import { initReviewsSlider } from './modules/reviews.js';
 import { initForm } from './modules/form.js';

@@ -25,30 +25,30 @@
     @media (min-width: $vp-1440) {
       padding: 60px 100px;
     }
+  }
+}
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 40px;
-      bottom: 40px;
-      left: 0;
+.feedback--style-blue::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 0;
 
-      width: 100%;
-      height: 753px;
+  width: 100%;
+  height: 753px;
 
-      background-image: url("../../img/background/form-mobile@1x.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+  background-image: url("../../img/background/form-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-      @media (resolution >= 2dppx) {
-        background-image: url("../img/background/form-mobile@2x.jpg");
-      }
+  @media (resolution >= 2dppx) {
+    background-image: url("../img/background/form-mobile@2x.jpg");
+  }
 
-      @media (min-width: $vp-768) {
-        display: none;
-      }
-    }
+  @media (min-width: $vp-768) {
+    display: none;
   }
 }
 
@@ -59,7 +59,6 @@
 
     max-width: 400px;
     margin: 0 auto;
-
     padding: 17px 15px 27px;
 
     color: var(--white, #ffffff);
@@ -94,26 +93,26 @@
         background-image: url("../img/background/form-desktop@2x.jpg");
       }
     }
+  }
+}
 
-    &::before {
-      @media (min-width: $vp-768) {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
+.feedback--style-blue .feedback__container::before {
+  @media (min-width: $vp-768) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 
-        width: calc(100% - var(--padding-right) + 40px);
-        height: 100%;
+    width: calc(100% - var(--padding-right) + 40px);
+    height: 100%;
 
-        background-color: var(--primary, #316dc2);
-        border-radius: 16px;
-      }
+    background-color: var(--primary, #316dc2);
+    border-radius: 16px;
+  }
 
-      @media (min-width: $vp-1440) {
-        width: 490px;
-      }
-    }
+  @media (min-width: $vp-1440) {
+    width: 490px;
   }
 }
 
