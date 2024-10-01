@@ -54,9 +54,11 @@
 
 .feedback__container {
   .feedback--style-blue & {
-    max-width: 400px;
     position: relative;
     z-index: 1;
+
+    max-width: 400px;
+    margin: 0 auto;
 
     padding: 17px 15px 27px;
 
@@ -66,9 +68,9 @@
     border-radius: 16px;
 
     @media (min-width: $vp-768) {
-      max-width: initial;
       position: relative;
 
+      max-width: 1240px;
       padding: 41px var(--padding-right) 36px 40px;
       --padding-right: 38.4%;
 
@@ -83,8 +85,7 @@
     }
 
     @media (min-width: $vp-1440) {
-      padding: 44px var(--padding-right) 40px 70px;
-      --padding-right: 66.1%;
+      padding: 44px 820px 40px 70px;
 
       background-image: url("../../img/background/form-desktop@1x.jpg");
 
@@ -109,7 +110,7 @@
       }
 
       @media (min-width: $vp-1440) {
-        width: calc(100% - var(--padding-right) + 70px);
+        width: 490px;
       }
     }
   }
@@ -212,9 +213,9 @@
 
     @media (min-width: $vp-768) {
       width: 352px;
+      margin: 0 auto 0 0;
       padding-top: 20px;
       padding-bottom: 20px;
-      margin: 0 auto 0 0;
     }
   }
 }
