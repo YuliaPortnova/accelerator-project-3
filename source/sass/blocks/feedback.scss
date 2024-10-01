@@ -22,6 +22,10 @@
       padding: 50px 58px;
     }
 
+    @media (min-width: $vp-1440) {
+      padding: 60px 100px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -78,18 +82,35 @@
       }
     }
 
+    @media (min-width: $vp-1440) {
+      padding: 44px var(--padding-right) 40px 70px;
+      --padding-right: 66.1%;
+
+      background-image: url("../../img/background/form-desktop@1x.jpg");
+
+      @media (resolution >= 2dppx) {
+        background-image: url("../img/background/form-desktop@2x.jpg");
+      }
+    }
+
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
+      @media (min-width: $vp-768) {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
 
-      width: calc(100% - var(--padding-right) + 40px);
-      height: 100%;
+        width: calc(100% - var(--padding-right) + 40px);
+        height: 100%;
 
-      background-color: var(--primary, #316dc2);
-      border-radius: 16px;
+        background-color: var(--primary, #316dc2);
+        border-radius: 16px;
+      }
+
+      @media (min-width: $vp-1440) {
+        width: calc(100% - var(--padding-right) + 70px);
+      }
     }
   }
 }
@@ -125,6 +146,10 @@
 
     @media (min-width: $vp-768) {
       margin-bottom: 31px;
+    }
+
+    @media (min-width: $vp-1440) {
+      margin-bottom: 34px;
     }
   }
 }

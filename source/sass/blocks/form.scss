@@ -16,11 +16,19 @@
     @media (min-width: $vp-768) {
       margin-bottom: 18px;
     }
+
+    @media (min-width: $vp-1440) {
+      margin-bottom: 20px;
+    }
   }
 
   .form--style-blue &:has(textarea) {
     @media (min-width: $vp-768) {
       margin-bottom: 22px;
+    }
+
+    @media (min-width: $vp-1440) {
+      margin-bottom: 20px;
     }
   }
 }
@@ -98,6 +106,16 @@
       font-size: 14px;
       line-height: 20px;
     }
+
+    @media (min-width: $vp-1440) {
+      line-height: 18px;
+    }
+  }
+}
+
+.form--style-blue .form__select-item .form__label {
+  @media (min-width: $vp-1440) {
+    line-height: 14px;
   }
 }
 
@@ -165,6 +183,10 @@
       line-height: 14px;
     }
 
+    @media (min-width: $vp-1440) {
+      line-height: 18px;
+    }
+
     &:hover {
       --border-color: var(--white, #ffffff);
     }
@@ -211,6 +233,10 @@
 
   @media (min-width: $vp-768) {
     min-height: 88px;
+  }
+
+  @media (min-width: $vp-1440) {
+    min-height: 90px;
   }
 }
 
@@ -279,6 +305,10 @@
 
     @media (min-width: $vp-768) {
       margin-top: 0;
+    }
+
+    @media (min-width: $vp-1440) {
+      margin-top: -1px;
     }
 
     &:hover {
