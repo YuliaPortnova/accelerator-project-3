@@ -13,6 +13,13 @@
 
     gap: 17px;
   }
+
+  @media (min-width: $vp-1440) {
+    padding-top: 60px;
+    align-items: start;
+
+    gap: 16px 50px;
+  }
 }
 
 .footer__logo {
@@ -36,6 +43,15 @@
     margin-right: -2px;
 
     gap: 11.5px;
+    justify-content: start;
+  }
+
+  @media (min-width: $vp-1440) {
+    max-width: 840px;
+    margin-top: 13px;
+    margin-right: auto;
+
+    gap: 12px 26.5px;
   }
 }
 
@@ -52,6 +68,10 @@
 
   @media (min-width: $vp-768) {
     font-size: 16px;
+  }
+
+  @media (min-width: $vp-1440) {
+    line-height: 26px;
   }
 
   &:hover {
@@ -80,6 +100,15 @@
 
   @media (min-width: $vp-768) {
     width: 60%;
+
+    text-align: left;
+  }
+
+  @media (min-width: $vp-1440) {
+    order: 1;
+    width: 100%;
+
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -94,9 +123,22 @@
     margin-left: -2px;
 
     line-height: 12px;
-    text-align: left;
 
     text-underline-offset: 3px;
+    text-align: left;
+  }
+
+  @media (min-width: $vp-1440) {
+    order: 1;
+    margin-right: -2px;
+    margin-left: 0;
+
+    font-size: 14px;
+    line-height: 18px;
+    text-align: end;
+
+    justify-self: end;
+    text-underline-offset: 6px;
   }
 }
 
@@ -110,7 +152,12 @@
 
   @media (min-width: $vp-768) {
     line-height: 12px;
-    text-align: left;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-top: 7px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 
@@ -120,5 +167,10 @@
   @media (min-width: $vp-768) {
     max-width: 35%;
     margin-top: 5px;
+  }
+
+  @media (min-width: $vp-1440) {
+    max-width: 204px;
+    margin-top: 8px;
   }
 }
