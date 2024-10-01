@@ -127,7 +127,9 @@
 
   background-color: transparent;
   border: 1px solid var(--border-color);
+
   --border-color: rgba(72, 72, 72, 0.3);
+
   border-radius: 8px;
 
   transition: border-color 0.3s ease;
@@ -160,6 +162,7 @@
 
   &:disabled {
     background-color: rgba(169, 175, 183, 0.2);
+
     --border-color: rgba(169, 175, 183, 0.5);
 
     pointer-events: none;
@@ -199,7 +202,9 @@
 
     &:disabled {
       background-color: rgba(255, 255, 255, 0.2);
+
       --border-color: var(--white, #ffffff);
+
       opacity: 0.4;
     }
   }
@@ -254,6 +259,7 @@
   transition: background-color 0.3s ease, opacity 0.3s ease;
 
   appearance: none;
+
   --icon-color: transparent;
 
   @media (min-width: $vp-768) {

@@ -3,7 +3,7 @@
 
   @media (min-width: $vp-768) {
     display: block;
-    width: calc(78% - 2* var(--swiper-scrollbar-sides-offset, 1%));
+    width: calc(78% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
 
     --swiper-scrollbar-bg-color: var(--blue-overlay, rgba(49, 109, 194, 0.2));
     --swiper-scrollbar-drag-bg-color: var(--primary, #316dc2);
@@ -13,7 +13,7 @@
   }
 
   @media (min-width: $vp-1440) {
-    width: calc(91.5% - 2* var(--swiper-scrollbar-sides-offset, 1%));
+    width: calc(91.5% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
   }
 }
 

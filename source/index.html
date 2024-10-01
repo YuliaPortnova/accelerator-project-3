@@ -25,7 +25,7 @@
       </div>
       <nav class="header__menu">
         <button class="header__menu-button button button--burger" type="button">Меню</button>
-        <ul class="header__menu-list" aria-hidden="true">
+        <ul class="header__menu-list">
           <!-- Для отображения состояния текущей страницы добавьте ссылке класс header__link c модификатором current -->
           <li class="header__menu-item">
             <a class="header__link" href="#about">О проекте</a>
@@ -454,8 +454,8 @@
             <input class="form__input" type="tel" name="tel" required>
           </label>
           <div class="form__item">
-            <span class="form__label">Ваше сообщение</span>
-            <textarea class="form__input form__textarea" name="message"></textarea>
+            <label class="form__label" for="feedback-message">Ваше сообщение</label>
+            <textarea class="form__input form__textarea" name="message" id="feedback-message"></textarea>
           </div>
           <div class="form__item form__select-item">
             <label class="form__label" for="feedback-select">Выберите город</label>
@@ -557,7 +557,7 @@
     </section>
   </div>
   <!-- Шаблон слайда раздела "Новости и материалы" -->
-  <template id="news-slide-template">
+  <template id="news-slide-template" class="news">
     <li class="news__slide swiper-slide">
       <div class="news__slide-content">
         <time class="news__date news__item-angle-bottom" datetime="2023-03-23">23/03/2023</time>

@@ -337,16 +337,6 @@
 
 .news__slide.swiper-slide-active + .news__slide {
   @media (min-width: $vp-768) {
-    transform: translateY(-30px);
-  }
-
-  @media (min-width: $vp-1440) {
-    transform: none;
-  }
-}
-
-.news__slide.swiper-slide-active + .news__slide {
-  @media (min-width: $vp-768) {
     margin-bottom: -30px;
 
     transform: translateY(-30px);

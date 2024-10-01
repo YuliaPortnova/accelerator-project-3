@@ -223,14 +223,14 @@
 
 .reviews__scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
   @media (min-width: $vp-768) {
-    width: calc(73% - 2* var(--swiper-scrollbar-sides-offset, 1%));
+    width: calc(73% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
     margin-left: 45px;
 
     --swiper-scrollbar-bottom: 60px;
   }
 
   @media (min-width: $vp-1440) {
-    width: calc(91.5% - 2* var(--swiper-scrollbar-sides-offset, 1%));
+    width: calc(91.5% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
     margin-left: 0;
 
     --swiper-scrollbar-bottom: 70px;

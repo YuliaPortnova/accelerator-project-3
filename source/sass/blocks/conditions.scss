@@ -185,7 +185,7 @@
     font-size: 18px;
     line-height: 18px;
     text-align: center;
-    color: var(--white);
+    color: var(--white, #ffffff);
     text-transform: uppercase;
 
     background-color: var(--primary, #316dc2);

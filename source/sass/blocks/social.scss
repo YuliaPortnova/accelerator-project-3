@@ -26,6 +26,7 @@
   border-radius: 50%;
 
   transition: background-color 0.8s ease;
+
   --icon-opacity: 1;
   --icon-color: var(--white, #ffffff);
 
@@ -40,12 +41,14 @@
 
   &:focus-visible {
     background-color: var(--white, #ffffff);
+
     --icon-color: var(--primary, #316dc2);
   }
 
   &:active {
     --icon-opacity: 1;
     --icon-color: var(--white, #ffffff);
+
     background-color: var(--state-active, #275699);
   }
 
