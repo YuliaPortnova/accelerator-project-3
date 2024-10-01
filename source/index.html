@@ -82,7 +82,7 @@
   </header>
   <main class="page__main">
     <h1 class="visually-hidden">Проект «Стажировка».</h1>
-    <section data-test="hero" class="page__hero hero swiper">
+    <section class="page__hero hero swiper" data-test="hero">
       <h2 class="visually-hidden">Что даст вам участие в этом проекте?</h2>
       <ul class="hero__list swiper-wrapper">
         <li class="hero__slide swiper-slide">
@@ -444,7 +444,7 @@
       <div class="feedback__container page__container">
         <h2 class="feedback__title">Напишите нам</h2>
         <p class="feedback__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-        <form class="feedback__form form form--style-blue" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+        <form class="feedback__form form form--style-blue" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off" name="feedback">
           <label class="form__item">
             <span class="form__label">Имя</span>
             <input class="form__input" type="text" name="name" required>
@@ -453,19 +453,19 @@
             <span class="form__label">Телефон</span>
             <input class="form__input" type="tel" name="tel" required>
           </label>
-          <label class="form__item">
+          <div class="form__item">
             <span class="form__label">Ваше сообщение</span>
             <textarea class="form__input form__textarea" name="message"></textarea>
-          </label>
-          <label class="form__item form__select-item">
-            <span class="form__label">Выберите город</span>
-            <select class="form__input form__select" name="city">
+          </div>
+          <div class="form__item form__select-item">
+            <label class="form__label" for="feedback-select">Выберите город</label>
+            <select class="form__input form__select" name="city" id="feedback-select">
               <option value="not-selected" selected disabled label=" "></option>
               <option value="Moscow">Москва</option>
               <option value="Saint-Petersburg">Санкт-Петербург</option>
               <option value="Nizhny-Novgorod">Нижний Новгород</option>
             </select>
-          </label>
+          </div>
           <label class="form__checkbox-item">
             <input class="form__checkbox" name="personal-data-consent" type="checkbox" required>
             <span class="form__checkbox-label">Я согласен на обработку моих персональных <br class="form__br-mobile">данных</span>
@@ -525,12 +525,12 @@
   </footer>
   <div class="modal modal--feedback">
     <section class="modal__content feedback">
-      <button class="modal__close-button">
+      <button class="modal__close-button" type="button">
         <span class="visually-hidden">Закрыть модальное окно.</span>
       </button>
       <h2 class="feedback__title">Напишите нам</h2>
       <p class="feedback__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-      <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+      <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off" name="feedback-modal">
         <label class="form__item">
           <span class="form__label">Имя</span>
           <input class="form__input" type="text" name="name" required>
@@ -539,15 +539,15 @@
           <span class="form__label">Телефон</span>
           <input class="form__input" type="tel" name="tel" required>
         </label>
-        <label class="form__item">
-          <span class="form__label">Выберите город</span>
-          <select class="form__input form__select" name="city">
+        <div class="form__item">
+          <label class="form__label" for="feedback-modal-select">Выберите город</label>
+          <select class="form__input form__select" name="city" id="feedback-modal-select">
             <option value="not-selected" selected disabled label=" "></option>
             <option value="Moscow">Москва</option>
             <option value="Saint-Petersburg">Санкт-Петербург</option>
             <option value="Nizhny-Novgorod">Нижний Новгород</option>
           </select>
-        </label>
+        </div>
         <label class="form__checkbox-item">
           <input class="form__checkbox" name="personal-data-consent" type="checkbox" required>
           <span class="form__checkbox-label">Я согласен на обработку моих персональных данных</span>
