@@ -50,7 +50,7 @@
 .is-open .header__logo {
   display: none;
 
-  @media (min-width: $vp-768) {
+  @media (min-width: 390px) {
     display: flex;
   }
 }
@@ -78,7 +78,6 @@
   }
 
   .is-open & {
-    width: 100%;
     margin-left: auto;
   }
 }
@@ -91,7 +90,7 @@
   width: 100%;
   max-height: 0;
   margin: 0;
-  padding: 0;
+  padding: 0 25px;
   overflow: hidden;
 
   list-style-type: none;
@@ -102,13 +101,13 @@
   border-radius: 16px;
   opacity: 0;
 
-  transition: opacity 0.3s ease, max-height 0.3s ease;
+  transition: opacity 0.3s ease, max-height 0.3s ease, padding-top 0.3s ease, padding-bottom 0.3s ease;
 
   gap: 28px;
 
   .is-open & {
-    padding: 35px 25px;
-
+    padding-top: 35px;
+    padding-bottom: 35px;
     opacity: 1;
   }
 }

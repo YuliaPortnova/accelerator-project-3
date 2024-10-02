@@ -18,7 +18,7 @@
   border-radius: 30px;
   cursor: pointer;
 
-  transition: width 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 
   &:hover {
     color: var(--white, #ffffff);
@@ -104,9 +104,12 @@
   }
 
   &--burger {
+    width: 136px;
     padding: 19px 70px 19px 20px;
 
     background-color: var(--white, #ffffff);
+
+    transition: width 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 
     @media (min-width: $vp-768) {
       padding-top: 20px;
@@ -146,11 +149,15 @@
 }
 
 .is-open .button--burger {
-  width: 100%;
+  width: 290px;
 
   color: var(--white, #ffffff);
 
   background-color: var(--primary, #316dc2);
+
+  @media (min-width: $vp-768) {
+    width: 286px;
+  }
 
   &::before {
     background-color: var(--white, #ffffff);
