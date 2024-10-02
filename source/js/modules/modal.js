@@ -34,9 +34,14 @@ const createModal = (modal, openButton) => {
     }
   };
 
+  const onModalSubmit = () => {
+    closeButton.click();
+  }
+
   openButton.addEventListener('click', onOpenButtonClick);
   closeButton.addEventListener('click', onCloseButtonClick);
   modal.addEventListener('click', onModalClick);
+  modal.addEventListener('submit', onModalSubmit);
 };
 
 export { createModal };
