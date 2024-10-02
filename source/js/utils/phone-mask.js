@@ -2,8 +2,9 @@ const phoneInputs = document.querySelectorAll('input[type="tel"]');
 const COUNTRY_CODE = '+7';
 const length = COUNTRY_CODE.length;
 
+const matrix = `${COUNTRY_CODE} (___) ___ __ __`;
+
 const replacePhoneValue = (element) => {
-  const matrix = `${COUNTRY_CODE} (___) ___ __ __`;
   const def = matrix.replace(/\D/g, '');
   let i = 0;
   let val = element.value.replace(/\D/g, '');
@@ -59,6 +60,7 @@ const initPhoneMask = () => {
         input.addEventListener('blur', onBlurPhoneInput);
         input.addEventListener('keydown', onKeydownPhoneInput);
       }
+      input.setAttribute('pattern', `.{${matrix.length},}`);
     });
   }
 };
