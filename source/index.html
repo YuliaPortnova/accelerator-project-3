@@ -451,16 +451,16 @@
           </label>
           <label class="form__item">
             <span class="form__label">Телефон</span>
-            <input class="form__input" type="tel" name="tel" required>
+            <input class="form__input " type="tel" name="tel" required pattern=".{18,}">
           </label>
           <div class="form__item">
             <label class="form__label" for="feedback-message">Ваше сообщение</label>
-            <textarea class="form__input form__textarea" name="message" id="feedback-message"></textarea>
+            <textarea class="form__input form__textarea" name="message" id="feedback-message" required></textarea>
           </div>
           <div class="form__item form__select-item">
             <label class="form__label" for="feedback-select">Выберите город</label>
-            <select class="form__input form__select" name="city" id="feedback-select">
-              <option value="not-selected" selected disabled label=" "></option>
+            <select class="form__input form__select" name="city" id="feedback-select" required>
+              <option value="" selected disabled label=" "></option>
               <option value="Moscow">Москва</option>
               <option value="Saint-Petersburg">Санкт-Петербург</option>
               <option value="Nizhny-Novgorod">Нижний Новгород</option>
@@ -537,12 +537,12 @@
         </label>
         <label class="form__item">
           <span class="form__label">Телефон</span>
-          <input class="form__input" type="tel" name="tel" required>
+          <input class="form__input" type="tel" name="tel" required pattern=".{18,}">
         </label>
         <div class="form__item">
           <label class="form__label" for="feedback-modal-select">Выберите город</label>
-          <select class="form__input form__select" name="city" id="feedback-modal-select">
-            <option value="not-selected" selected disabled label=" "></option>
+          <select class="form__input form__select" name="city" id="feedback-modal-select" required>
+            <option value="" selected disabled label=" "></option>
             <option value="Moscow">Москва</option>
             <option value="Saint-Petersburg">Санкт-Петербург</option>
             <option value="Nizhny-Novgorod">Нижний Новгород</option>

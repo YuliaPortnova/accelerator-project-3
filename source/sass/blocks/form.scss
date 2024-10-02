@@ -210,6 +210,13 @@
   }
 }
 
+.form__input.check-error {
+  &:invalid {
+    --border-color: var(--state-error, #ff5e66);
+    background-color: rgba(255, 94, 102, 0.2);
+  }
+}
+
 .form__item:has(.form__input:hover) .form__label {
   opacity: 1;
 }
@@ -281,11 +288,6 @@
     pointer-events: none;
   }
 
-  &--error {
-    background-color: rgba(255, 94, 102, 0.2);
-    border: 1px solid var(--state-error, #ff5e66);
-  }
-
   &::before {
     content: "";
 
@@ -333,6 +335,13 @@
 
       --icon-color: rgba(255, 255, 255, 0.7);
     }
+  }
+}
+
+.form__checkbox.check-error {
+  &:invalid {
+    background-color: rgba(255, 94, 102, 0.2);
+    border-color: var(--state-error, #ff5e66);
   }
 }
 

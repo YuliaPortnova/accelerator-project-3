@@ -1,5 +1,5 @@
-import { renderTabs, renderSlides } from './view';
-import { news } from './model';
+import { renderTabs, renderSlides } from './view.js';
+import { news } from './model.js';
 
 const tabButtons = document.querySelectorAll('.news__tab');
 
