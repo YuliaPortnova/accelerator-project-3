@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import {Navigation, Pagination, Grid} from 'swiper/modules';
+import { Navigation, Pagination, Grid } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/grid';
 
@@ -21,7 +21,7 @@ const renderTabs = (currentTab) => {
 };
 
 const createSlides = (data) => data.map((properties) => {
-  const {topic, date, title, text} = properties;
+  const { topic, date, title, text } = properties;
   const slide = template.content.querySelector('.news__slide').cloneNode(true);
   slide.classList.add(`news__slide--${topic}`);
   slide.querySelector('.news__slide-title').textContent = title;
@@ -42,7 +42,8 @@ const initNewsSlider = () => {
       el: '.news__pagination',
       clickable: true,
       renderBullet: function (index, className) {
-        return `<button class="${ className }" type="button" aria-label="Показать страницу ${ index + 1 }.">${ index + 1 }</button>`;
+        let isNecessary = (index < 4)? true: false;
+        return `<button class="${className}" type="button" aria-label="Показать страницу ${index + 1}." style="display: ${isNecessary?'inline-flex':'none'}">${index + 1}</button>`;
       },
     },
     spaceBetween: 20,
@@ -79,6 +80,42 @@ const initNewsSlider = () => {
         grid: {
           rows: 1,
         },
+      }
+    },
+
+    on: {
+      afterInit: (swiper) => {
+        const paginationBullets = swiper.pagination.bullets;
+        paginationBullets.forEach((paginationBullet, activeIndex) => {
+          paginationBullet.addEventListener('click', () => {
+
+            paginationBullets.forEach((paginationBullet, currentIndex) => {
+              let isNecessary = false;
+              if ( activeIndex <= (currentIndex + 2)  ) {
+                isNecessary = true;
+              }
+              if ( currentIndex > activeIndex + 1) {
+                isNecessary = false;
+              }
+              if ( activeIndex <= 2 && currentIndex <= 3) {
+                isNecessary = true;
+              }
+              if ( activeIndex === (paginationBullets.length - 1) && currentIndex === (paginationBullets.length - 4)) {
+                isNecessary = true;
+              }
+
+              paginationBullet.style.display = isNecessary? 'inline-flex': 'none';
+            })
+          });
+        });
+      },
+
+      realIndexChange: (swiper) => {
+        swiper.pagination.bullets.forEach((bullet) => {
+          if (bullet.classList.contains('swiper-pagination-bullet-active')) {
+            bullet.click();
+          };
+        });
       }
     },
   });
