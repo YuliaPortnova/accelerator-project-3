@@ -200,6 +200,11 @@
     opacity: 0.5;
   }
 
+  &:disabled {
+    color: var(--state-disabled, #a9afb7);
+    pointer-events: none;
+  }
+
   &--current {
     opacity: 1;
   }

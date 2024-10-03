@@ -332,8 +332,6 @@
       border-color: var(--state-disabled, #a9afb7);
 
       pointer-events: none;
-
-      --icon-color: rgba(255, 255, 255, 0.7);
     }
   }
 }
@@ -365,6 +363,12 @@
   opacity: 1;
 
   --icon-color: var(--primary, #316dc2);
+
+  &:disabled {
+    background-color: var(--state-disabled, #a9afb7);
+    border-color: var(--state-disabled, #a9afb7);
+    --icon-color: rgba(255, 255, 255, 0.7);
+  }
 }
 
 .form__checkbox:checked:hover,

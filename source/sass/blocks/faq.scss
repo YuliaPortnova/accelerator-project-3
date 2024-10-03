@@ -272,6 +272,13 @@
   border-color: var(--state-disabled, #a9afb7);
 }
 
+.faq__question.is-active:disabled .faq__close-icon {
+  color: #dddfe2;
+
+  background-color: var(--state-disabled, #a9afb7);
+  border-color: var(--state-disabled, #a9afb7);
+}
+
 .faq__question.is-active .faq__close-icon {
   color: var(--primary, #316dc2);
 
