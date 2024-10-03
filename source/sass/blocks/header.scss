@@ -5,8 +5,8 @@
 .header__container {
   position: absolute;
   top: 20px;
-  left: 0;
   right: 0;
+  left: 0;
   z-index: 2;
 
   display: flex;
@@ -21,23 +21,19 @@
 
   &::before {
     content: "";
-    position: absolute;
-    top: -20px;
-    left: 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
     z-index: 3;
 
-    width: 100%;
+    display: none;
+    width: 100vw;
     height: 100vh;
 
     background-color: var(--dark-overlay, rgba(13, 29, 51, 0.4));
-    visibility: hidden;
-    opacity: 0;
+    transform: translateX(-50%);
 
     transition: opacity 0.3s ease;
-
-    @media (min-width: $vp-768) {
-      top: -30px;
-    }
   }
 }
 
@@ -58,8 +54,7 @@
 .is-open .header__container::before {
   z-index: 1;
 
-  visibility: visible;
-  opacity: 0.8;
+  display: block;
 }
 
 .header__menu-button {
@@ -108,6 +103,7 @@
   .is-open & {
     padding-top: 35px;
     padding-bottom: 35px;
+
     opacity: 1;
   }
 }
@@ -202,6 +198,7 @@
 
   &:disabled {
     color: var(--state-disabled, #a9afb7);
+
     pointer-events: none;
   }
 
