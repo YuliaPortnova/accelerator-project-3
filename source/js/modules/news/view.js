@@ -46,6 +46,7 @@ const initNewsSlider = () => {
         return `<button class="${className}" type="button" aria-label="Показать страницу ${index + 1}." style="display: ${isNecessary?'inline-flex':'none'}">${index + 1}</button>`;
       },
     },
+    speed: 300,
     spaceBetween: 20,
     lazy: true,
     lazyPreloadPrevNext: 1,

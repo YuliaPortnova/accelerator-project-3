@@ -222,6 +222,10 @@
   }
 }
 
-.header__list-button.is-active::after {
-  transform: rotate(-180deg);
+.header__list-button.is-active {
+  opacity: 1;
+
+  &::after {
+    transform: rotate(-180deg);
+  }
 }
