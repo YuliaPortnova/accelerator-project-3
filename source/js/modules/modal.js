@@ -1,8 +1,14 @@
 let onDocumentKeydown;
+let onDocumentFocus;
 
 const openModal = (modal, closeButton) => {
   onDocumentKeydown = (event) => {
     if (event.key.startsWith('Esc')) {
+      closeButton.click();
+    }
+  };
+  onDocumentFocus = (event) => {
+    if (!modal.contains( event.target ) ) {
       closeButton.click();
     }
   };
@@ -11,12 +17,14 @@ const openModal = (modal, closeButton) => {
   modal.classList.add('is-open');
   document.body.classList.add('page__modal-open');
   document.addEventListener('keydown', onDocumentKeydown);
+  document.addEventListener('focus', onDocumentFocus, true);
 };
 
 const closeModal = (modal) => {
   modal.classList.remove('is-open');
   document.body.classList.remove('page__modal-open');
   document.removeEventListener('keydown', onDocumentKeydown);
+  document.removeEventListener('focus', onDocumentFocus, true);
 };
 
 const createModal = (modal, openButton) => {
