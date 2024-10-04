@@ -34,6 +34,13 @@ const heroSlider = new Swiper('.hero', {
   },
 
   on: {
+    realIndexChange: () => {
+      innerButtons.forEach((button) => {
+        button.setAttribute('tabindex', '-1');
+      });
+      innerButtons[heroSlider.realIndex].setAttribute('tabindex', '0');
+    },
+
     slideChangeTransitionStart: (swiper) => {
       swiper.pagination.init();
       swiper.pagination.render();

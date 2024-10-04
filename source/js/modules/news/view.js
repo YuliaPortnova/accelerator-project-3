@@ -42,8 +42,8 @@ const initNewsSlider = () => {
       el: '.news__pagination',
       clickable: true,
       renderBullet: function (index, className) {
-        let isNecessary = (index < 4)? true: false;
-        return `<button class="${className}" type="button" aria-label="Показать страницу ${index + 1}." style="display: ${isNecessary?'inline-flex':'none'}">${index + 1}</button>`;
+        let isNecessary = (index < 4) ? true : false;
+        return `<button class="${className}" type="button" aria-label="Показать страницу ${index + 1}." style="display: ${isNecessary ? 'inline-flex' : 'none'}">${index + 1}</button>`;
       },
     },
     speed: 300,
@@ -92,20 +92,20 @@ const initNewsSlider = () => {
 
             paginationBullets.forEach((paginationBullet, currentIndex) => {
               let isNecessary = false;
-              if ( activeIndex <= (currentIndex + 2)  ) {
+              if (activeIndex <= (currentIndex + 2)) {
                 isNecessary = true;
               }
-              if ( currentIndex > activeIndex + 1) {
+              if (currentIndex > activeIndex + 1) {
                 isNecessary = false;
               }
-              if ( activeIndex <= 2 && currentIndex <= 3) {
+              if (activeIndex <= 2 && currentIndex <= 3) {
                 isNecessary = true;
               }
-              if ( activeIndex === (paginationBullets.length - 1) && currentIndex === (paginationBullets.length - 4)) {
+              if (activeIndex === (paginationBullets.length - 1) && currentIndex === (paginationBullets.length - 4)) {
                 isNecessary = true;
               }
 
-              paginationBullet.style.display = isNecessary? 'inline-flex': 'none';
+              paginationBullet.style.display = isNecessary ? 'inline-flex' : 'none';
             })
           });
         });

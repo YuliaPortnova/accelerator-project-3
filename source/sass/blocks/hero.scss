@@ -147,7 +147,8 @@
   }
 
   @media (min-width: $vp-1440) {
-    margin: 0 auto 0 0;
+    transform: translateX(-434px);
+    margin: 0 auto;
   }
 
   &::before {
