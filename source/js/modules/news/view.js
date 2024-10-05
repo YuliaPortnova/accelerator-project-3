@@ -1,7 +1,8 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Grid } from 'swiper/modules';
+import { Navigation, Pagination, Grid, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/grid';
+import 'swiper/css/a11y';
 
 const tabButtons = document.querySelectorAll('.news__tab');
 const template = document.querySelector('#news-slide-template');
@@ -33,7 +34,7 @@ const createSlides = (data) => data.map((properties) => {
 
 const initNewsSlider = () => {
   new Swiper('.news__slider', {
-    modules: [Navigation, Pagination, Grid],
+    modules: [Navigation, Pagination, Grid, A11y],
     navigation: {
       nextEl: '.news__slider-buttons .swiper-button-next',
       prevEl: '.news__slider-buttons .swiper-button-prev',
@@ -45,6 +46,10 @@ const initNewsSlider = () => {
         let isNecessary = (index < 4) ? true : false;
         return `<button class="${className}" type="button" aria-label="Показать страницу ${index + 1}." style="display: ${isNecessary ? 'inline-flex' : 'none'}">${index + 1}</button>`;
       },
+    },
+
+    a11y: {
+      scrollOnFocus: true,
     },
     speed: 300,
     spaceBetween: 20,
@@ -60,6 +65,7 @@ const initNewsSlider = () => {
         allowTouchMove: true,
         slidesPerView: 1,
         slidesPerGroup: 1,
+        spaceBetween: 20,
         grid: {
           rows: 2,
         },
