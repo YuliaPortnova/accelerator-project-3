@@ -46,7 +46,7 @@
 .is-open .header__logo {
   display: none;
 
-  @media (min-width: 390px) {
+  @media (width >= 390px) {
     display: flex;
   }
 }

@@ -308,7 +308,7 @@
   }
 }
 
-.news__slide:nth-child(3n + 1).news__slide---career {
+.news__slide:nth-child(3n + 1).news__slide--career {
   @media (min-width: $vp-1440) {
     background-image: url("../img/background/news-4-wide-desktop@1x.jpg");
 

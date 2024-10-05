@@ -9,7 +9,7 @@ const createAccordions = (buttons) => {
 
       const focusableElements = clickedDescription.querySelectorAll('button, a');
       const tabIndex = isActive ? 0 : -1;
-      focusableElements.forEach(element => element.setAttribute('tabindex', tabIndex));
+      focusableElements.forEach((element) => element.setAttribute('tabindex', tabIndex));
     });
   });
 };

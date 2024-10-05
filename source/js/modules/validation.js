@@ -4,7 +4,7 @@ const addErrorCheckClass = (fields) => {
       field.classList.add('check-error');
     });
   }
-}
+};
 
 const initValidation = (form) => {
   const inputs = form.querySelectorAll('input');

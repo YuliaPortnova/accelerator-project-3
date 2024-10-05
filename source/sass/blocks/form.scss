@@ -213,6 +213,7 @@
 .form__input.check-error {
   &:invalid {
     --border-color: var(--state-error, #ff5e66);
+
     background-color: rgba(255, 94, 102, 0.2);
   }
 }
@@ -368,6 +369,7 @@
   &:disabled {
     background-color: var(--state-disabled, #a9afb7);
     border-color: var(--state-disabled, #a9afb7);
+
     --icon-color: rgba(255, 255, 255, 0.7);
   }
 }

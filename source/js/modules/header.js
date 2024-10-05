@@ -32,9 +32,9 @@ const initHeader = () => {
       accordionButtons.forEach((button)=> {
         button.removeEventListener('click', onButtonClick);
       });
-      focusableAllListElements.forEach(element => element.setAttribute('tabindex', '-1'));
+      focusableAllListElements.forEach((element) => element.setAttribute('tabindex', '-1'));
     } else {
-      focusableUpperListElements.forEach(element => element.setAttribute('tabindex', '0'));
+      focusableUpperListElements.forEach((element) => element.setAttribute('tabindex', '0'));
       list.style.maxHeight = `${list.scrollHeight + LIST_PADDING}px`;
       header.classList.add('is-open');
       openButton.classList.add('button--blue-background');
@@ -48,8 +48,8 @@ const initHeader = () => {
   menuLinks.forEach((link) => {
     link.addEventListener('click', () => {
       openButton.click();
-    })
-  })
+    });
+  });
 
   createAccordions(accordionButtons);
 };

@@ -43,7 +43,7 @@ const initNewsSlider = () => {
       el: '.news__pagination',
       clickable: true,
       renderBullet: function (index, className) {
-        let isNecessary = (index < 4) ? true : false;
+        const isNecessary = (index < 4);
         return `<button class="${className}" type="button" aria-label="Показать страницу ${index + 1}." style="display: ${isNecessary ? 'inline-flex' : 'none'}">${index + 1}</button>`;
       },
     },
@@ -99,7 +99,7 @@ const initNewsSlider = () => {
         paginationBullets.forEach((paginationBullet, activeIndex) => {
           paginationBullet.addEventListener('click', () => {
 
-            paginationBullets.forEach((paginationBullet, currentIndex) => {
+            paginationBullets.forEach((bullet, currentIndex) => {
               let isNecessary = false;
               if (activeIndex <= (currentIndex + 2)) {
                 isNecessary = true;
@@ -114,8 +114,8 @@ const initNewsSlider = () => {
                 isNecessary = true;
               }
 
-              paginationBullet.style.display = isNecessary ? 'inline-flex' : 'none';
-            })
+              bullet.style.display = isNecessary ? 'inline-flex' : 'none';
+            });
           });
         });
       },
@@ -124,7 +124,7 @@ const initNewsSlider = () => {
         swiper.pagination.bullets.forEach((bullet) => {
           if (bullet.classList.contains('swiper-pagination-bullet-active')) {
             bullet.click();
-          };
+          }
         });
       }
     },

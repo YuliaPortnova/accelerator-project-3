@@ -8,7 +8,7 @@ const openModal = (modal, closeButton) => {
     }
   };
   onDocumentFocus = (event) => {
-    if (!modal.contains( event.target ) ) {
+    if (!modal.contains(event.target)) {
       closeButton.click();
     }
   };
@@ -44,7 +44,7 @@ const createModal = (modal, openButton) => {
 
   const onModalSubmit = () => {
     closeButton.click();
-  }
+  };
 
   openButton.addEventListener('click', onOpenButtonClick);
   closeButton.addEventListener('click', onCloseButtonClick);
