@@ -281,6 +281,7 @@
 
   background-color: var(--white, #ffffff);
   border-radius: 0 12px 12px;
+  min-width: 270px;
 
   @media (min-width: $vp-768) {
     display: grid;

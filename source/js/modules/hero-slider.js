@@ -13,7 +13,7 @@ const heroSlider = new Swiper('.hero', {
   },
   watchOverflow: true,
   spaceBetween: 40,
-  speed: 500,
+  speed: 300,
   loop: true,
   lazy: true,
   lazyPreloadPrevNext: 3,
@@ -28,7 +28,6 @@ const heroSlider = new Swiper('.hero', {
       allowTouchMove: true,
     },
     1440: {
-      speed: 800,
       allowTouchMove: false,
     }
   },
