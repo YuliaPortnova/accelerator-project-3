@@ -154,6 +154,7 @@
   color: var(--white, #ffffff);
 
   background-color: var(--primary, #316dc2);
+  border-color: var(--primary, #316dc2);
 
   @media (min-width: $vp-768) {
     width: 286px;

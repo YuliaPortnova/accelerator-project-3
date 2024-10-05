@@ -4,6 +4,8 @@ const header = document.querySelector('.header');
 const openButton = header.querySelector('.header__menu-button');
 const list = header.querySelector('.header__menu-list');
 const accordionButtons = header.querySelectorAll('.header__list-button');
+const focusableUpperListElements = list.querySelectorAll('.header__focusable-item-js');
+const focusableAllListElements = list.querySelectorAll('a, button');
 
 const LIST_PADDING = 70;
 const SUBLIST_PADDING = 100;
@@ -29,7 +31,9 @@ const initHeader = () => {
       accordionButtons.forEach((button)=> {
         button.removeEventListener('click', onButtonClick);
       });
+      focusableAllListElements.forEach(element => element.setAttribute('tabindex', '-1'));
     } else {
+      focusableUpperListElements.forEach(element => element.setAttribute('tabindex', '0'));
       list.style.maxHeight = `${list.scrollHeight + LIST_PADDING}px`;
       header.classList.add('is-open');
       openButton.classList.add('button--blue-background');
