@@ -73,7 +73,7 @@ const initNewsSlider = () => {
       768: {
         allowTouchMove: true,
         slidesPerView: 2,
-        slidesPerGroup: 2,
+        slidesPerGroup: 4,
         spaceBetween: 30,
         grid: {
           rows: 2,

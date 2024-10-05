@@ -278,45 +278,42 @@
   }
 }
 
-.swiper-slide-active.news__slide {
-  &--internships {
-    @media (min-width: $vp-1440) {
-      background-image: url("../img/background/news-1-wide-desktop@1x.jpg");
+.news__slide:nth-child(3n + 1).news__slide--internships {
+  @media (min-width: $vp-1440) {
+    background-image: url("../img/background/news-1-wide-desktop@1x.jpg");
 
-      @media (resolution >= 2dppx) {
-        background-image: url("../img/background/news-1-wide-desktop@2x.jpg");
-      }
+    @media (resolution >= 2dppx) {
+      background-image: url("../img/background/news-1-wide-desktop@2x.jpg");
     }
   }
+}
 
-  &--trips {
-    @media (min-width: $vp-1440) {
-      background-image: url("../img/background/news-2-wide-desktop@1x.jpg");
+.news__slide:nth-child(3n + 1).news__slide--trips {
+  @media (min-width: $vp-1440) {
+    background-image: url("../img/background/news-2-wide-desktop@1x.jpg");
 
-      @media (resolution >= 2dppx) {
-        background-image: url("../img/background/news-2-wide-desktop@2x.jpg");
-      }
+    @media (resolution >= 2dppx) {
+      background-image: url("../img/background/news-2-wide-desktop@2x.jpg");
     }
   }
+}
 
-  &--volunteering {
-    @media (min-width: $vp-1440) {
-      background-image: url("../img/background/news-3-wide-desktop@1x.jpg");
+.news__slide:nth-child(3n + 1).news__slide--volunteering {
+  @media (min-width: $vp-1440) {
+    background-image: url("../img/background/news-3-wide-desktop@1x.jpg");
 
-      @media (resolution >= 2dppx) {
-        background-image: url("../img/background/news-3-wide-desktop@2x.jpg");
-      }
+    @media (resolution >= 2dppx) {
+      background-image: url("../img/background/news-3-wide-desktop@2x.jpg");
     }
   }
+}
 
+.news__slide:nth-child(3n + 1).news__slide---career {
+  @media (min-width: $vp-1440) {
+    background-image: url("../img/background/news-4-wide-desktop@1x.jpg");
 
-  &--career {
-    @media (min-width: $vp-1440) {
-      background-image: url("../img/background/news-4-wide-desktop@1x.jpg");
-
-      @media (resolution >= 2dppx) {
-        background-image: url("../img/background/news-4-wide-desktop@2x.jpg");
-      }
+    @media (resolution >= 2dppx) {
+      background-image: url("../img/background/news-4-wide-desktop@2x.jpg");
     }
   }
 }
@@ -374,6 +371,11 @@
 
   @media (min-width: $vp-1440) {
     order: 0;
+  }
+}
+
+.news__slide:nth-child(3n + 1) {
+  @media (min-width: $vp-1440) {
     width: 604px;
   }
 }
@@ -484,7 +486,7 @@
   }
 }
 
-.swiper-slide-active .news__slide-title {
+.news__slide:nth-child(3n + 1) .news__slide-title {
   @media (min-width: $vp-1440) {
     width: 426px;
     padding: 18px 18px 6px 0;
@@ -513,7 +515,7 @@
   }
 }
 
-.swiper-slide-active .news__slide-wrapper {
+.news__slide:nth-child(3n + 1) .news__slide-wrapper {
   @media (min-width: $vp-1440) {
     width: 468px;
   }
