@@ -6,6 +6,7 @@ const list = header.querySelector('.header__menu-list');
 const accordionButtons = header.querySelectorAll('.header__list-button');
 const focusableUpperListElements = list.querySelectorAll('.header__focusable-item-js');
 const focusableAllListElements = list.querySelectorAll('a, button');
+const menuLinks = list.querySelectorAll('.header__link');
 
 const LIST_PADDING = 70;
 const SUBLIST_PADDING = 100;
@@ -43,6 +44,12 @@ const initHeader = () => {
       });
     }
   });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      openButton.click();
+    })
+  })
 
   createAccordions(accordionButtons);
 };
