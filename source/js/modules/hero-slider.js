@@ -17,7 +17,6 @@ const heroSlider = new Swiper('.hero', {
   loop: true,
   lazy: true,
   lazyPreloadPrevNext: 3,
-  preventClicks: true,
   autoHeight: true,
 
   breakpoints: {

@@ -21,7 +21,6 @@ const initProgramsSlider = () => {
     spaceBetween: 30,
     lazy: true,
     lazyPreloadPrevNext: 1,
-    preventClicks: true,
 
     breakpoints: {
       320: {
