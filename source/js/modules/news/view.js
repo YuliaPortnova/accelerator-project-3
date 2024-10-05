@@ -68,15 +68,17 @@ const initNewsSlider = () => {
         spaceBetween: 20,
         grid: {
           rows: 2,
+          fill: 'column',
         },
       },
       768: {
         allowTouchMove: true,
         slidesPerView: 2,
-        slidesPerGroup: 4,
+        slidesPerGroup: 2,
         spaceBetween: 30,
         grid: {
           rows: 2,
+          fill: 'row',
         },
       },
       1440: {
@@ -86,6 +88,7 @@ const initNewsSlider = () => {
         spaceBetween: 32,
         grid: {
           rows: 1,
+          fill: 'column',
         },
       }
     },
