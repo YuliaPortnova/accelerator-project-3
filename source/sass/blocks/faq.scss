@@ -85,18 +85,21 @@
   }
 
   &:active {
-    background-color: var(--color-white, #ffffff);
     color: var(--state-active, #275699);
+
+    background-color: var(--color-white, #ffffff);
   }
 
   &:disabled {
-    pointer-events: none;
     cursor: default;
+
+    pointer-events: none;
   }
 }
 
 .faq__question.is-active {
   color: var(--color-white, #ffffff);
+
   background-color: var(--primary, #316dc2);
 
   @media (min-width: $vp-768) {
@@ -127,6 +130,7 @@
 
   @media (min-width: $vp-768) {
     padding-right: 50px;
+
     font-size: 22px;
     line-height: 26px;
   }
@@ -141,8 +145,11 @@
   max-height: 0;
   padding: 0 15px;
   overflow: hidden;
-  background-color: transparent;
+
   color: var(--beige, #f0efe9);
+
+  background-color: transparent;
+
   transition: max-height 0.3s ease, background-color 0.3s ease;
 
   @media (min-width: $vp-768) {
@@ -175,8 +182,9 @@
 }
 
 .faq__question.is-active + .faq__answer {
-  background-color: var(--primary, #316dc2);
   padding-bottom: 20px;
+
+  background-color: var(--primary, #316dc2);
 
   @media (min-width: $vp-768) {
     padding-bottom: 30px;
@@ -213,8 +221,9 @@
 
   @media (min-width: $vp-768) {
     top: 30px;
-    transform: none;
     right: 30px;
+
+    transform: none;
   }
 
   @media (min-width: $vp-1440) {

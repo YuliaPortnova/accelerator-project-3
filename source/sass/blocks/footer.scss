@@ -15,8 +15,8 @@
   }
 
   @media (min-width: $vp-1440) {
-    padding-top: 60px;
     align-items: start;
+    padding-top: 60px;
 
     gap: 16px 50px;
   }
@@ -38,12 +38,12 @@
   gap: 20px 26px;
 
   @media (min-width: $vp-768) {
+    justify-content: start;
     max-width: 85%;
     margin-top: 16px;
     margin-right: -2px;
 
     gap: 11.5px;
-    justify-content: start;
   }
 
   @media (min-width: $vp-1440) {
@@ -123,9 +123,9 @@
     margin-left: -2px;
 
     line-height: 12px;
+    text-align: left;
 
     text-underline-offset: 3px;
-    text-align: left;
   }
 
   @media (min-width: $vp-1440) {
@@ -156,6 +156,7 @@
 
   @media (min-width: $vp-1440) {
     margin-top: 7px;
+
     font-size: 14px;
     line-height: 18px;
   }

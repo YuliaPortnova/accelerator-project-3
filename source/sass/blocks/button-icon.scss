@@ -6,56 +6,66 @@
   height: 30px;
 
   color: var(--white, #ffffff);
+
   background-color: var(--primary, #316dc2);
   border: none;
   border-radius: 50%;
   cursor: pointer;
 
-  --icon-transform: rotate(-45deg);
-
   transition: background-color 0.3s ease, color 0.3s ease;
+
+  --icon-transform: rotate(-45deg);
 
   &::before {
     content: "";
+
     width: 10px;
     height: 10px;
+
     background-color: currentColor;
-    mask-image: var(--icon-url);
-    mask-repeat: no-repeat;
-    mask-position: center;
     transform: var(--icon-transform);
     transform-origin: center;
+
     transition: rotate 0.3s ease, background-color 0.3s ease;
+
+    mask-image: var(--icon-url);
+    mask-position: center;
+    mask-repeat: no-repeat;
   }
 
   &:hover {
-    background-color: var(--white, #ffffff);
     color: var(--primary, #316dc2);
+
+    background-color: var(--white, #ffffff);
 
     --icon-transform: rotate(0);
   }
 
   &:active {
-    opacity: 0.7;
-    background-color: var(--white, #ffffff);
     color: var(--primary, #316dc2);
+
+    background-color: var(--white, #ffffff);
+    opacity: 0.7;
 
     --icon-transform: rotate(0);
   }
 
   &:focus-visible {
-    opacity: 1;
     color: var(--white, #ffffff);
+
     background-color: var(--primary, #316dc2);
+    opacity: 1;
 
     --icon-transform: rotate(0);
   }
 
   &--disabled,
   &:disabled {
-    pointer-events: none;
     color: rgba(255, 255, 255, 0.6);
+
     background-color: var(--state-disabled, #a9afb7);
+
+    pointer-events: none;
 
     --icon-transform: rotate(-45deg);
   }

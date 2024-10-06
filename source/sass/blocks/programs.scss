@@ -276,12 +276,12 @@
   position: relative;
   z-index: 1;
 
+  min-width: 270px;
   min-height: 69px;
   padding: 12px 64px 15px 18px;
 
   background-color: var(--white, #ffffff);
   border-radius: 0 12px 12px;
-  min-width: 270px;
 
   @media (min-width: $vp-768) {
     display: grid;

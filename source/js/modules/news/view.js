@@ -8,7 +8,6 @@ const tabButtons = document.querySelectorAll('.news__tab');
 const template = document.querySelector('#news-slide-template');
 const container = document.querySelector('.news__slider-list');
 
-
 const renderTabs = (currentTab) => {
   tabButtons.forEach((button) => {
     const isCurrent = (currentTab === button.dataset.topic);
@@ -35,10 +34,12 @@ const createSlides = (data) => data.map((properties) => {
 const initNewsSlider = () => {
   new Swiper('.news__slider', {
     modules: [Navigation, Pagination, Grid, A11y],
+
     navigation: {
       nextEl: '.news__slider-buttons .swiper-button-next',
       prevEl: '.news__slider-buttons .swiper-button-prev',
     },
+
     pagination: {
       el: '.news__pagination',
       clickable: true,
@@ -50,12 +51,16 @@ const initNewsSlider = () => {
 
     a11y: {
       scrollOnFocus: true,
+      slideLabelMessage: 'Слайд {{index}} из {{slidesLength}} слайдов',
+      slideRole: 'listitem',
     },
+
     speed: 300,
     spaceBetween: 20,
     lazy: true,
     lazyPreloadPrevNext: 1,
     preventClicks: true,
+
     grid: {
       rows: 2,
     },

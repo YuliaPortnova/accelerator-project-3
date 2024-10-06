@@ -20,15 +20,15 @@
   align-items: center;
   width: 26px;
   height: 26px;
-  cursor: pointer;
 
   background-color: var(--primary, #316dc2);
   border-radius: 50%;
+  cursor: pointer;
 
   transition: background-color 0.3s ease;
 
-  --icon-opacity: 1;
   --icon-color: var(--white, #ffffff);
+  --icon-opacity: 1;
 
   @media (min-width: $vp-768) {
     width: 36px;
@@ -46,10 +46,10 @@
   }
 
   &:active {
-    --icon-opacity: 1;
-    --icon-color: var(--white, #ffffff);
-
     background-color: var(--state-active, #275699);
+
+    --icon-color: var(--white, #ffffff);
+    --icon-opacity: 1;
   }
 
   &::before {
