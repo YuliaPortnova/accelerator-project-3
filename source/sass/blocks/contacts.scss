@@ -114,6 +114,8 @@
 .contacts__link {
   color: var(--white, #ffffff);
 
+  border-radius: 15px;
+
   transition: color 0.3s ease, text-decoration-color 0.3s ease, opacity 0.3s ease, text-underline-offset 0.3s ease;
 
   text-decoration-color: transparent;
@@ -159,14 +161,15 @@
 }
 
 .contacts__map-wrapper img {
-  background-color: #f9f7e8;
-  color: var(--text, #484848);
   display: block;
+  width: 290px;
   margin-right: auto;
   margin-left: auto;
 
+  color: var(--text, #484848);
+
+  background-color: #f9f7e8;
   border-radius: 16px;
-  width: 290px;
 
   @media (min-width: $vp-768) {
     width: 678px;
