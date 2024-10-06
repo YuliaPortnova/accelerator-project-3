@@ -31,8 +31,10 @@ const createSlides = (data) => data.map((properties) => {
   return slide;
 });
 
+let newsSlider;
+
 const initNewsSlider = () => {
-  new Swiper('.news__slider', {
+  newsSlider = new Swiper('.news__slider', {
     modules: [Navigation, Pagination, Grid, A11y],
 
     navigation: {
@@ -140,6 +142,7 @@ const renderSlides = (data) => {
   container.innerHTML = '';
   container.append(...createSlides(data));
   initNewsSlider();
+  newsSlider.update();
 };
 
 export { renderTabs, renderSlides };
