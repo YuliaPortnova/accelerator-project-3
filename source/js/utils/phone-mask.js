@@ -11,10 +11,14 @@ const replacePhoneValue = (element) => {
   if (def.length >= val.length) {
     val = def;
   }
-  element.value = matrix.replace(/./g, (a) =>
-    // eslint-disable-next-line no-nested-ternary
-    /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a
-  );
+  element.value = matrix.replace(/./g, (a) => {
+    if (/[_\d]/.test(a) && i < val.length) {
+      return val.charAt(i++);
+    } else if (i >= val.length) {
+       return '';
+    }
+    return a;
+  });
 };
 
 const onInputPhoneInput = ({target}) => {
