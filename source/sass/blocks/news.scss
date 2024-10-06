@@ -175,6 +175,7 @@
   justify-content: flex-end;
   align-items: flex-start;
 
+  background-color: var(--blue-overlay, rgba(49, 109, 194, 0.2));
   background-repeat: no-repeat;
   background-position: left 50% top 30%;
   background-size: cover;
@@ -544,7 +545,6 @@
   left: 50%;
 
   display: flex;
-  flex-wrap: wrap;
   max-width: 215px;
 
   transform: translateX(-50%);
@@ -564,8 +564,9 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 26px;
+  min-width: 26px;
   height: 26px;
+  padding: 2px 7px;
 
   font-size: 14px;
   line-height: 14px;
@@ -575,7 +576,7 @@
 
   background-color: transparent;
   border: 2px solid transparent;
-  border-radius: 50%;
+  border-radius: 14px;
   cursor: pointer;
   opacity: 0.5;
 

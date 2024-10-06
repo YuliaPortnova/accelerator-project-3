@@ -134,7 +134,7 @@
   &--burger::after {
     content: "";
     position: absolute;
-    top: 23px;
+    top: calc(50% - 4px);
     right: 19px;
 
     width: 15px;
@@ -142,7 +142,7 @@
 
     background-color: var(--burger-color);
     border-radius: 1px;
-    box-shadow: 0 3px 0 0 var(--burger-color), 0 6px 0 0 var(--burger-color);
+    box-shadow: 0 3.5px 0 0 var(--burger-color), 0 7px 0 0 var(--burger-color);
 
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
   }
@@ -173,7 +173,7 @@
   }
 
   &::after {
-    top: 17px;
+    top: calc(50% - 10px);
     right: 17px;
 
     width: 20px;
