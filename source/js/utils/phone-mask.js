@@ -15,7 +15,7 @@ const replacePhoneValue = (element) => {
     if (/[_\d]/.test(a) && i < val.length) {
       return val.charAt(i++);
     } else if (i >= val.length) {
-       return '';
+      return '';
     }
     return a;
   });
