@@ -221,17 +221,15 @@
   opacity: 0.6;
 }
 
-.button--burger {
-  &:hover {
-    --burger-color: var(--primary, #316dc2);
-  }
+.button--burger:hover {
+  --burger-color: var(--primary, #316dc2);
+}
 
-  &:focus-visible {
-    color: var(--primary, #316dc2);
+.button--burger:focus-visible {
+  color: var(--primary, #316dc2);
 
-    background-color: var(--white, #ffffff);
-    border-color: var(--white, #ffffff);
-  }
+  background-color: var(--white, #ffffff);
+  border-color: var(--white, #ffffff);
 }
 
 .button--burger:focus-visible:hover {
