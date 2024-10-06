@@ -6,6 +6,8 @@
 }
 
 .slider-buttons__button {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +58,14 @@
     mask-image: url("../__spritemap#sprite-arrow-right-slider-view");
     mask-position: center;
     mask-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
   }
 }
 
