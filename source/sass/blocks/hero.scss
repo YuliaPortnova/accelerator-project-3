@@ -240,7 +240,8 @@
 }
 
 .hero__pagination .swiper-pagination-bullet-active {
-  background-color: var(--primary, #316dc2);
+  background-color: var(--state-active, #275699);
+  border-color: var(--state-active, #275699);
 }
 
 .hero__slide-title {
