@@ -1,4 +1,4 @@
-import { renderTabs, renderSlides } from './view.js';
+import { renderTabs, renderSlides, updateSlider } from './view.js';
 import { news } from './model.js';
 
 const tabButtons = document.querySelectorAll('.news__tab');
@@ -22,6 +22,12 @@ const initNews = (data) => {
   });
 
   tabButtons[0].click();
+
+
+  const breakpointMobile = window.matchMedia('(max-width: 767px)');
+  const breakpointTablet = window.matchMedia('(max-width: 1439px)');
+  breakpointMobile.addEventListener('change', () => updateSlider());
+  breakpointTablet.addEventListener('change', () => updateSlider());
 };
 
 export { initNews };

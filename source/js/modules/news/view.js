@@ -58,14 +58,8 @@ const initNewsSlider = () => {
     },
 
     speed: 300,
-    spaceBetween: 20,
     lazy: true,
     lazyPreloadPrevNext: 1,
-    preventClicks: true,
-
-    grid: {
-      rows: 2,
-    },
 
     breakpoints: {
       320: {
@@ -145,4 +139,9 @@ const renderSlides = (data) => {
   newsSlider.update();
 };
 
-export { renderTabs, renderSlides };
+const updateSlider = () => {
+  newsSlider.destroy(false, true);
+  initNewsSlider();
+};
+
+export { renderTabs, renderSlides, updateSlider };
