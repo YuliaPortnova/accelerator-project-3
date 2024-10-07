@@ -99,7 +99,7 @@
     color: var(--primary, #316dc2);
 
     background-color: var(--white, #ffffff);
-    border-color: var(--primary, #316dc2);
+    border-color: var(--white, #ffffff);
     opacity: 1;
   }
 
@@ -585,6 +585,8 @@
   @media (min-width: $vp-768) {
     width: 32px;
     height: 32px;
+
+    border-radius: 16px;
   }
 
   &:hover {
