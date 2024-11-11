@@ -39,7 +39,7 @@
 
   &:disabled {
     background-color: transparent;
-    cursor: default;
+    pointer-events: none;
 
     --arrow-color: var(--state-disabled, #a9afb7);
   }
