@@ -38,7 +38,7 @@
   width: 100%;
   height: 753px;
 
-  background-image: url("../../img/background/form-mobile@1x.jpg");
+  background-image: url("../img/background/form-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -74,7 +74,7 @@
 
       --padding-right: 38.4%;
 
-      background-image: url("../../img/background/form-tablet@1x.jpg");
+      background-image: url("../img/background/form-tablet@1x.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -87,7 +87,7 @@
     @media (min-width: $vp-1440) {
       padding: 44px 820px 40px 70px;
 
-      background-image: url("../../img/background/form-desktop@1x.jpg");
+      background-image: url("../img/background/form-desktop@1x.jpg");
 
       @media (resolution >= 2dppx) {
         background-image: url("../img/background/form-desktop@2x.jpg");
